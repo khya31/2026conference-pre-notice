@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#4d9be8">
+
   <title>2026年高屏澎青職特會行前通知</title>
 
   <style>
@@ -11,41 +12,51 @@
       --blue: #4d9be8;
       --blue-dark: #286aa8;
       --blue-light: #c9dff2;
+      --blue-pale: #edf6fc;
 
       --cream: #f7f6f2;
       --white: #ffffff;
 
       --beige: #e9e0d7;
+      --beige-light: #f3eee8;
+
       --brown: #a87543;
+      --brown-dark: #795737;
 
       --text: #263743;
+      --text-dark: #203849;
       --gray: #6b7881;
+
       --line: #e2e7ea;
 
-      --shadow: 0 12px 32px rgba(43, 72, 92, 0.09);
+      --shadow:
+        0 14px 36px rgba(43,72,92,.10);
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       margin: 0;
 
       background:
         radial-gradient(
-          circle at 10% 5%,
-          rgba(77, 155, 232, 0.12),
-          transparent 28%
+          circle at 8% 5%,
+          rgba(77,155,232,.11),
+          transparent 27%
         ),
         radial-gradient(
-          circle at 92% 18%,
-          rgba(168, 117, 67, 0.08),
-          transparent 24%
+          circle at 94% 18%,
+          rgba(168,117,67,.08),
+          transparent 25%
         ),
         var(--cream);
 
@@ -61,104 +72,495 @@
       line-height: 1.75;
     }
 
+
     .page {
       width: min(960px, calc(100% - 28px));
+
       margin: 0 auto;
-      padding: 28px 0 60px;
+
+      padding:
+        28px
+        0
+        60px;
     }
 
 
-    /* =========================
-       標題區
-    ========================== */
+
+    /* ==================================================
+       標題主視覺
+    ================================================== */
 
     .hero {
       position: relative;
+
       overflow: hidden;
 
-      min-height: 230px;
+      min-height: 310px;
 
       display: flex;
       align-items: center;
 
-      padding: 44px 42px;
+      padding:
+        48px
+        50px;
+
+      border-radius: 32px;
 
       background:
         linear-gradient(
-          135deg,
-          rgba(255,255,255,0.97),
-          rgba(255,255,255,0.75)
-        ),
-        linear-gradient(
-          135deg,
-          var(--blue-light),
-          var(--beige)
+          120deg,
+          #ffffff 0%,
+          #fbfcfc 48%,
+          #eef5f8 100%
         );
 
-      border-radius: 30px;
-
-      border: 1px solid rgba(255,255,255,0.9);
+      border:
+        1px solid
+        rgba(255,255,255,.96);
 
       box-shadow: var(--shadow);
+
+      isolation: isolate;
     }
+
+
+    /* 左上大圓 */
 
     .hero::before {
       content: "";
 
       position: absolute;
 
-      width: 280px;
-      height: 280px;
+      width: 220px;
+      height: 220px;
 
-      right: -80px;
-      top: -100px;
+      left: -125px;
+      top: -108px;
 
       border-radius: 50%;
 
-      background: rgba(77,155,232,0.18);
+      background: var(--blue);
 
       box-shadow:
-        -65px 95px 0 -28px rgba(201,223,242,0.7),
-        -130px 155px 0 -52px rgba(168,117,67,0.18);
+        106px 18px 0 -48px var(--blue-light);
+
+      z-index: -1;
     }
+
+
+    /* 右下圓弧 */
 
     .hero::after {
       content: "";
 
       position: absolute;
 
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
 
-      left: -95px;
-      bottom: -105px;
+      right: 90px;
+      bottom: -115px;
 
       border-radius: 50%;
 
-      border: 22px solid rgba(168,117,67,0.13);
+      border:
+        28px solid
+        rgba(168,117,67,.18);
+
+      z-index: -1;
     }
 
-    h1 {
+
+    .hero-content {
       position: relative;
-      z-index: 2;
 
-      max-width: 760px;
+      z-index: 5;
 
+      width: 72%;
+    }
+
+
+    /* 上方小標 */
+
+    .hero-topline {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: var(--blue-dark);
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: .14em;
+    }
+
+
+    .hero-topline::before {
+      content: "";
+
+      display: block;
+
+      width: 42px;
+      height: 4px;
+
+      border-radius: 100px;
+
+      background: var(--brown);
+    }
+
+
+    /* 主標題 */
+
+    .hero-title-area {
+      display: flex;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap:
+        13px
+        17px;
+    }
+
+
+    .hero-title {
       margin: 0;
 
-      font-size: clamp(32px, 5vw, 54px);
+      color: var(--text-dark);
 
-      line-height: 1.25;
+      font-size:
+        clamp(
+          33px,
+          5vw,
+          55px
+        );
 
-      letter-spacing: -1.5px;
+      font-weight: 950;
 
-      color: #203849;
+      line-height: 1.16;
+
+      letter-spacing: -2px;
     }
 
 
-    /* =========================
+    /* 行前通知做成特殊標籤 */
+
+    .notice-tag {
+      position: relative;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding:
+        8px
+        17px
+        9px;
+
+      background: var(--blue);
+
+      color: #ffffff;
+
+      border-radius:
+        9px
+        18px
+        9px
+        18px;
+
+      box-shadow:
+        0 8px 18px rgba(77,155,232,.25);
+
+      font-size:
+        clamp(
+          18px,
+          2.5vw,
+          25px
+        );
+
+      font-weight: 900;
+
+      letter-spacing: .12em;
+
+      transform: rotate(-2deg);
+
+      white-space: nowrap;
+    }
+
+
+    .notice-tag::after {
+      content: "";
+
+      position: absolute;
+
+      right: -11px;
+      bottom: 7px;
+
+      width: 19px;
+      height: 19px;
+
+      background: var(--blue);
+
+      clip-path:
+        polygon(
+          0 0,
+          100% 50%,
+          0 100%
+        );
+    }
+
+
+    /* 日期區 */
+
+    .hero-date-row {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 27px;
+    }
+
+
+    .date-card {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding:
+        8px
+        13px;
+
+      border-radius: 13px;
+
+      background:
+        rgba(255,255,255,.84);
+
+      border:
+        1px solid
+        rgba(77,155,232,.18);
+
+      color: #405c6d;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 5px 13px
+        rgba(55,83,101,.05);
+    }
+
+
+    .date-card strong {
+      display: grid;
+
+      place-items: center;
+
+      min-width: 31px;
+      height: 31px;
+
+      padding:
+        0
+        7px;
+
+      border-radius: 9px;
+
+      background: var(--blue);
+
+      color: #ffffff;
+
+      font-size: 13px;
+    }
+
+
+    .date-card:nth-child(2) strong {
+      background: var(--brown);
+    }
+
+
+    .hero-en {
+      margin-left: 3px;
+
+      color: #89969e;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .14em;
+    }
+
+
+
+    /* ==================================================
+       右側幾何設計
+    ================================================== */
+
+    .hero-art {
+      position: absolute;
+
+      right: 0;
+      top: 0;
+
+      width: 42%;
+      height: 100%;
+
+      pointer-events: none;
+
+      z-index: 1;
+    }
+
+
+    .geo-big-circle {
+      position: absolute;
+
+      width: 230px;
+      height: 230px;
+
+      right: -55px;
+      top: -40px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          145deg,
+          #4d9be8,
+          #8cc0e7
+        );
+    }
+
+
+    .geo-square {
+      position: absolute;
+
+      width: 124px;
+      height: 124px;
+
+      right: 115px;
+      top: 94px;
+
+      border-radius: 24px;
+
+      background: var(--beige);
+
+      transform: rotate(14deg);
+
+      box-shadow:
+        0 10px 25px
+        rgba(94,79,63,.08);
+    }
+
+
+    .geo-small-square {
+      position: absolute;
+
+      width: 68px;
+      height: 68px;
+
+      right: 37px;
+      bottom: 33px;
+
+      border-radius: 18px;
+
+      background: var(--brown);
+
+      transform: rotate(-12deg);
+    }
+
+
+    .geo-line-one {
+      position: absolute;
+
+      width: 88px;
+      height: 8px;
+
+      right: 181px;
+      top: 71px;
+
+      border-radius: 100px;
+
+      background: var(--brown);
+
+      transform: rotate(-16deg);
+    }
+
+
+    .geo-line-two {
+      position: absolute;
+
+      width: 66px;
+      height: 8px;
+
+      right: 54px;
+      bottom: 113px;
+
+      border-radius: 100px;
+
+      background: var(--blue-light);
+
+      transform: rotate(15deg);
+    }
+
+
+    .geo-dot {
+      position: absolute;
+
+      border-radius: 50%;
+    }
+
+
+    .geo-dot.one {
+      width: 18px;
+      height: 18px;
+
+      right: 260px;
+      bottom: 52px;
+
+      background: var(--blue);
+    }
+
+
+    .geo-dot.two {
+      width: 10px;
+      height: 10px;
+
+      right: 291px;
+      bottom: 82px;
+
+      background: var(--brown);
+    }
+
+
+    .geo-dot.three {
+      width: 8px;
+      height: 8px;
+
+      right: 259px;
+      bottom: 104px;
+
+      background: var(--blue-light);
+    }
+
+
+
+    /* ==================================================
        配色裝飾條
-    ========================== */
+    ================================================== */
 
     .color-line {
       display: grid;
@@ -174,37 +576,47 @@
 
       height: 13px;
 
-      margin: 18px 0 30px;
+      margin:
+        18px
+        0
+        30px;
     }
+
 
     .color-line div {
       border-radius: 100px;
     }
 
+
     .color-line div:nth-child(1) {
       background: var(--blue);
     }
+
 
     .color-line div:nth-child(2) {
       background: var(--blue-light);
     }
 
+
     .color-line div:nth-child(3) {
       background: #f2f1ed;
     }
 
+
     .color-line div:nth-child(4) {
       background: var(--beige);
     }
+
 
     .color-line div:nth-child(5) {
       background: var(--brown);
     }
 
 
-    /* =========================
-       摺疊項目
-    ========================== */
+
+    /* ==================================================
+       摺疊選單
+    ================================================== */
 
     .hint {
       margin-bottom: 18px;
@@ -216,31 +628,41 @@
       font-size: 14px;
     }
 
+
     .accordion {
       display: grid;
 
       gap: 14px;
     }
 
+
     details {
       overflow: hidden;
 
-      background: rgba(255,255,255,0.9);
+      background:
+        rgba(255,255,255,.92);
 
-      border: 1px solid rgba(53,79,96,0.12);
+      border:
+        1px solid
+        rgba(53,79,96,.12);
 
       border-radius: 22px;
 
       box-shadow:
-        0 7px 22px rgba(50,75,92,0.06);
+        0 7px 22px
+        rgba(50,75,92,.06);
     }
+
 
     details[open] {
-      border-color: rgba(77,155,232,0.28);
+      border-color:
+        rgba(77,155,232,.28);
 
       box-shadow:
-        0 14px 32px rgba(50,75,92,0.09);
+        0 14px 32px
+        rgba(50,75,92,.09);
     }
+
 
     summary {
       display: flex;
@@ -249,7 +671,9 @@
 
       gap: 15px;
 
-      padding: 18px 21px;
+      padding:
+        18px
+        21px;
 
       cursor: pointer;
 
@@ -257,16 +681,18 @@
 
       user-select: none;
 
+      color: #294355;
+
       font-size: 19px;
 
       font-weight: 900;
-
-      color: #294355;
     }
+
 
     summary::-webkit-details-marker {
       display: none;
     }
+
 
     .number {
       flex-shrink: 0;
@@ -287,28 +713,35 @@
       font-size: 14px;
 
       box-shadow:
-        0 7px 16px rgba(77,155,232,0.24);
+        0 7px 16px
+        rgba(77,155,232,.24);
     }
+
 
     details:nth-child(2) .number {
       background: #79afd8;
     }
 
+
     details:nth-child(3) .number {
       background: var(--blue-dark);
     }
+
 
     details:nth-child(4) .number {
       background: #bda38b;
     }
 
+
     details:nth-child(5) .number {
       background: var(--brown);
     }
 
+
     .title {
       flex: 1;
     }
+
 
     .arrow {
       position: relative;
@@ -322,6 +755,7 @@
 
       background: #f1f5f7;
     }
+
 
     .arrow::before,
     .arrow::after {
@@ -338,8 +772,12 @@
 
       background: #637885;
 
-      transition: transform 0.2s ease;
+      transition:
+        transform
+        .2s
+        ease;
     }
+
 
     .arrow::before {
       left: 9px;
@@ -347,47 +785,66 @@
       transform: rotate(45deg);
     }
 
+
     .arrow::after {
       right: 9px;
 
       transform: rotate(-45deg);
     }
 
+
     details[open] .arrow::before {
       transform: rotate(-45deg);
     }
+
 
     details[open] .arrow::after {
       transform: rotate(45deg);
     }
 
+
     .content {
-      padding: 5px 22px 22px;
+      padding:
+        5px
+        22px
+        22px;
 
       border-top:
-        1px solid rgba(53,79,96,0.11);
+        1px solid
+        rgba(53,79,96,.11);
     }
 
+
     .content ol {
-      margin: 14px 0 0;
+      margin:
+        14px
+        0
+        0;
 
       padding-left: 1.5em;
     }
 
+
     .content li {
-      margin: 11px 0;
+      margin:
+        11px
+        0;
 
       padding-left: 4px;
     }
 
+
     .time {
       display: inline-block;
 
-      padding: 0 7px;
+      padding:
+        0
+        7px;
 
       border-radius: 7px;
 
-      background: rgba(77,155,232,0.11);
+      background:
+        rgba(77,155,232,.11);
 
       color: var(--blue-dark);
 
@@ -395,24 +852,36 @@
     }
 
 
-    /* =========================
-       聚會提醒
-    ========================== */
+
+    /* ==================================================
+       聚會提醒文字
+    ================================================== */
 
     .meeting-note {
-      margin: 16px 0 8px;
+      margin:
+        16px
+        0
+        8px;
 
-      padding: 13px 16px;
+      padding:
+        13px
+        16px;
 
-      border-left: 4px solid var(--blue);
+      border-left:
+        4px solid
+        var(--blue);
 
-      border-radius: 0 13px 13px 0;
+      border-radius:
+        0
+        13px
+        13px
+        0;
 
       background:
         linear-gradient(
           90deg,
-          rgba(77,155,232,0.12),
-          rgba(201,223,242,0.18)
+          rgba(77,155,232,.12),
+          rgba(201,223,242,.18)
         );
 
       color: #36586d;
@@ -421,21 +890,25 @@
     }
 
 
-    /* =========================
+
+    /* ==================================================
        桌機版時間表
-    ========================== */
+    ================================================== */
 
     .schedule-table {
       margin-top: 17px;
 
       overflow-x: auto;
 
-      border: 1px solid var(--line);
+      border:
+        1px solid
+        var(--line);
 
       border-radius: 18px;
 
       background: #ffffff;
     }
+
 
     table {
       width: 100%;
@@ -447,35 +920,46 @@
       font-size: 15px;
     }
 
+
     th,
     td {
-      padding: 13px 15px;
+      padding:
+        13px
+        15px;
 
       text-align: center;
 
       vertical-align: middle;
 
-      border-right: 1px solid var(--line);
+      border-right:
+        1px solid
+        var(--line);
 
-      border-bottom: 1px solid var(--line);
+      border-bottom:
+        1px solid
+        var(--line);
     }
+
 
     th:last-child,
     td:last-child {
       border-right: none;
     }
 
+
     tbody tr:last-child td {
       border-bottom: none;
     }
 
+
     thead th {
-      background: #edf6fc;
+      background: var(--blue-pale);
 
       color: #2c526a;
 
       font-size: 16px;
     }
+
 
     td:first-child {
       width: 26%;
@@ -489,18 +973,23 @@
       white-space: nowrap;
     }
 
+
     .sat {
-      background: rgba(201,223,242,0.33);
+      background:
+        rgba(201,223,242,.33);
     }
+
 
     .sun {
-      background: rgba(233,224,215,0.38);
+      background:
+        rgba(233,224,215,.38);
     }
 
 
-    /* =========================
+
+    /* ==================================================
        手機版時間表
-    ========================== */
+    ================================================== */
 
     .mobile-schedule {
       display: none;
@@ -510,33 +999,41 @@
       margin-top: 16px;
     }
 
+
     .day {
       overflow: hidden;
 
       background: #ffffff;
 
-      border: 1px solid var(--line);
+      border:
+        1px solid
+        var(--line);
 
       border-radius: 18px;
     }
 
+
     .day h3 {
       margin: 0;
 
-      padding: 12px 15px;
+      padding:
+        12px
+        15px;
 
-      background: #edf6fc;
+      background: var(--blue-pale);
 
       color: #2c526a;
 
       font-size: 17px;
     }
 
+
     .day.sunday h3 {
       background: #f3ece5;
 
       color: #795b3c;
     }
+
 
     .schedule-item {
       display: grid;
@@ -547,12 +1044,17 @@
 
       gap: 10px;
 
-      padding: 11px 14px;
+      padding:
+        11px
+        14px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
 
       font-size: 14px;
     }
+
 
     .schedule-item time {
       color: #506775;
@@ -563,9 +1065,10 @@
     }
 
 
-    /* =========================
+
+    /* ==================================================
        頁尾
-    ========================== */
+    ================================================== */
 
     footer {
       margin-top: 28px;
@@ -578,29 +1081,226 @@
     }
 
 
-    /* =========================
+
+    /* ==================================================
        手機版
-    ========================== */
+    ================================================== */
 
     @media (max-width: 700px) {
 
       .page {
-        width: calc(100% - 20px);
+        width:
+          calc(100% - 20px);
 
         padding-top: 10px;
       }
 
+
+      /* -------------------------
+         手機標題
+      ------------------------- */
+
       .hero {
-        min-height: 200px;
+        min-height: 285px;
 
-        padding: 32px 22px;
+        padding:
+          31px
+          23px
+          35px;
 
-        border-radius: 24px;
+        align-items: flex-end;
+
+        border-radius: 25px;
       }
 
-      h1 {
-        font-size: clamp(29px, 9.5vw, 42px);
+
+      .hero-content {
+        width: 100%;
       }
+
+
+      .hero-topline {
+        margin-bottom: 11px;
+
+        font-size: 11px;
+      }
+
+
+      .hero-topline::before {
+        width: 28px;
+      }
+
+
+      .hero-title-area {
+        display: block;
+      }
+
+
+      .hero-title {
+        position: relative;
+
+        z-index: 5;
+
+        width: 82%;
+
+        font-size:
+          clamp(
+            30px,
+            8.8vw,
+            42px
+          );
+
+        line-height: 1.17;
+
+        letter-spacing: -1px;
+      }
+
+
+      /*
+        手機版將「行前通知」做成獨立設計標籤，
+        不是一般標題換行。
+      */
+
+      .notice-tag {
+        margin-top: 11px;
+
+        padding:
+          6px
+          13px
+          7px;
+
+        font-size: 17px;
+
+        border-radius:
+          8px
+          15px
+          8px
+          15px;
+
+        transform: rotate(-2deg);
+      }
+
+
+      .notice-tag::after {
+        right: -8px;
+
+        width: 14px;
+        height: 14px;
+      }
+
+
+      .hero-date-row {
+        gap: 7px;
+
+        margin-top: 18px;
+      }
+
+
+      .date-card {
+        padding:
+          6px
+          9px;
+
+        font-size: 13px;
+      }
+
+
+      .date-card strong {
+        min-width: 26px;
+        height: 26px;
+
+        font-size: 11px;
+      }
+
+
+      .hero-en {
+        width: 100%;
+
+        margin-top: 3px;
+
+        font-size: 9px;
+      }
+
+
+      /* -------------------------
+         手機右側幾何圖
+      ------------------------- */
+
+      .hero-art {
+        width: 55%;
+      }
+
+
+      .geo-big-circle {
+        width: 160px;
+        height: 160px;
+
+        right: -61px;
+        top: -49px;
+      }
+
+
+      .geo-square {
+        width: 88px;
+        height: 88px;
+
+        right: 18px;
+        top: 71px;
+
+        border-radius: 19px;
+
+        opacity: .86;
+      }
+
+
+      .geo-small-square {
+        width: 47px;
+        height: 47px;
+
+        right: 13px;
+        bottom: 28px;
+
+        border-radius: 14px;
+      }
+
+
+      .geo-line-one {
+        width: 53px;
+        height: 6px;
+
+        right: 71px;
+        top: 50px;
+      }
+
+
+      .geo-line-two {
+        display: none;
+      }
+
+
+      .geo-dot.one {
+        right: 114px;
+        bottom: 39px;
+
+        width: 15px;
+        height: 15px;
+      }
+
+
+      .geo-dot.two {
+        right: 141px;
+        bottom: 62px;
+      }
+
+
+      .geo-dot.three {
+        display: none;
+      }
+
+
+      /* -------------------------
+         項目
+      ------------------------- */
 
       summary {
         gap: 12px;
@@ -610,6 +1310,7 @@
         font-size: 17px;
       }
 
+
       .number {
         width: 38px;
         height: 38px;
@@ -617,16 +1318,59 @@
         border-radius: 12px;
       }
 
+
       .content {
-        padding: 4px 16px 18px;
+        padding:
+          4px
+          16px
+          18px;
       }
+
+
+      /* 手機不用桌機表格 */
 
       .schedule-table {
         display: none;
       }
 
+
       .mobile-schedule {
         display: grid;
+      }
+
+    }
+
+
+
+    /* ==================================================
+       很窄的手機
+    ================================================== */
+
+    @media (max-width: 390px) {
+
+      .hero-title {
+        width: 88%;
+
+        font-size: 29px;
+      }
+
+
+      .date-card {
+        font-size: 12px;
+      }
+
+
+      summary {
+        font-size: 16px;
+      }
+
+
+      .schedule-item {
+        grid-template-columns:
+          105px
+          1fr;
+
+        font-size: 13px;
       }
 
     }
@@ -640,25 +1384,90 @@
 <main class="page">
 
 
-  <!-- =========================
-       標題
-  ========================== -->
+  <!-- ==================================================
+       標題主視覺
+  ================================================== -->
 
   <section class="hero">
 
-    <h1>
-      2026年高屏澎青職特會<br>
-      行前通知
-    </h1>
+    <div class="hero-content">
+
+      <div class="hero-topline">
+        2026 KAO－PING－PENG
+      </div>
+
+
+      <div class="hero-title-area">
+
+        <h1 class="hero-title">
+          高屏澎青職特會
+        </h1>
+
+        <div class="notice-tag">
+          行前通知
+        </div>
+
+      </div>
+
+
+      <div class="hero-date-row">
+
+        <div class="date-card">
+          <strong>六</strong>
+          10 / 3
+        </div>
+
+        <div class="date-card">
+          <strong>日</strong>
+          10 / 4
+        </div>
+
+        <div class="hero-en">
+          YOUNG WORKING SAINTS CONFERENCE
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 右側幾何裝飾 -->
+
+    <div
+      class="hero-art"
+      aria-hidden="true"
+    >
+
+      <div class="geo-big-circle"></div>
+
+      <div class="geo-square"></div>
+
+      <div class="geo-small-square"></div>
+
+      <div class="geo-line-one"></div>
+
+      <div class="geo-line-two"></div>
+
+      <div class="geo-dot one"></div>
+
+      <div class="geo-dot two"></div>
+
+      <div class="geo-dot three"></div>
+
+    </div>
 
   </section>
 
 
-  <!-- =========================
-       配色裝飾
-  ========================== -->
 
-  <div class="color-line">
+  <!-- ==================================================
+       配色裝飾條
+  ================================================== -->
+
+  <div
+    class="color-line"
+    aria-hidden="true"
+  >
     <div></div>
     <div></div>
     <div></div>
@@ -672,16 +1481,17 @@
   </div>
 
 
-  <!-- =========================
-       五大項目
-  ========================== -->
+
+  <!-- ==================================================
+       五個大項目
+  ================================================== -->
 
   <section class="accordion">
 
 
-    <!-- =========================
+    <!-- ==================================================
          01 福華度假飯店住宿、用餐
-    ========================== -->
+    ================================================== -->
 
     <details>
 
@@ -695,7 +1505,10 @@
           福華度假飯店住宿、用餐
         </span>
 
-        <span class="arrow"></span>
+        <span
+          class="arrow"
+          aria-hidden="true"
+        ></span>
 
       </summary>
 
@@ -711,6 +1524,7 @@
             開放辦理入住。
           </li>
 
+
           <li>
             辦理入住時間及位置：
             <span class="time">
@@ -718,6 +1532,7 @@
             </span>
             於飯店大廳左側，茶水點心區旁。
           </li>
+
 
           <li>
             晚餐於
@@ -739,9 +1554,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          02 停車資訊
-    ========================== -->
+    ================================================== -->
 
     <details>
 
@@ -755,7 +1570,10 @@
           停車資訊
         </span>
 
-        <span class="arrow"></span>
+        <span
+          class="arrow"
+          aria-hidden="true"
+        ></span>
 
       </summary>
 
@@ -769,12 +1587,14 @@
             如有行動不便者，請先至飯店大門下車。
           </li>
 
+
           <li>
             非住宿於福華飯店者，
             請告知車道入口工作人員來參加
             「高雄市召會活動」，
             即可入內停車。
           </li>
+
 
           <li>
             飯店車位有限，
@@ -790,9 +1610,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          03 特會時間表
-    ========================== -->
+    ================================================== -->
 
     <details>
 
@@ -806,7 +1626,10 @@
           特會時間表
         </span>
 
-        <span class="arrow"></span>
+        <span
+          class="arrow"
+          aria-hidden="true"
+        ></span>
 
       </summary>
 
@@ -814,7 +1637,7 @@
       <div class="content">
 
 
-        <!-- 桌機版時間表 -->
+        <!-- 桌機版 -->
 
         <div class="schedule-table">
 
@@ -1007,7 +1830,8 @@
         </div>
 
 
-        <!-- 手機版時間表 -->
+
+        <!-- 手機版 -->
 
         <div class="mobile-schedule">
 
@@ -1020,52 +1844,73 @@
               10/3 週六
             </h3>
 
+
             <div class="schedule-item">
+
               <time>
                 06:00～15:00
               </time>
+
               <div>
                 各路線相調
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 15:00～17:00
               </time>
+
               <div>
                 入住 check-in
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 17:00～19:00
               </time>
+
               <div>
                 晚餐
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 19:30～21:00
               </time>
+
               <div>
                 信息一
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 21:00～22:00
               </time>
+
               <div>
                 專題一
               </div>
+
             </div>
 
           </section>
+
 
 
           <!-- 10/4 -->
@@ -1076,70 +1921,99 @@
               10/4 主日
             </h3>
 
+
             <div class="schedule-item">
+
               <time>
                 06:00～06:30
               </time>
+
               <div>
                 起牀、盥洗
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 06:30～07:30
               </time>
+
               <div>
                 海邊晨興
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 07:30～09:00
               </time>
+
               <div>
                 早餐
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 09:00～09:30
               </time>
+
               <div>
                 擘餅聚會
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 09:30～11:05
               </time>
+
               <div>
                 信息二
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 11:05～11:30
               </time>
+
               <div>
                 專題二
               </div>
+
             </div>
 
+
             <div class="schedule-item">
+
               <time>
                 11:30～15:00
               </time>
+
               <div>
                 賦歸
               </div>
+
             </div>
 
           </section>
+
 
         </div>
 
@@ -1149,9 +2023,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          04 聚會及兒童服事
-    ========================== -->
+    ================================================== -->
 
     <details>
 
@@ -1165,7 +2039,10 @@
           聚會及兒童服事
         </span>
 
-        <span class="arrow"></span>
+        <span
+          class="arrow"
+          aria-hidden="true"
+        ></span>
 
       </summary>
 
@@ -1185,6 +2062,7 @@
             再依招待服事聖徒指引前往會場。
           </li>
 
+
           <li>
             提前
             <span class="time">
@@ -1202,6 +2080,7 @@
             至會場參加團體禱告。
           </li>
 
+
           <li>
             <span class="time">
               18:45
@@ -1213,15 +2092,18 @@
             完成報到者，可獲贈特會紀念品。
           </li>
 
+
           <li>
             聚會時請佩戴名牌。
             （請自備名牌套，或於現場購買。）
           </li>
 
+
           <li>
             聚會及配搭服事時請著正式服裝，
             鞋子以包鞋為主。
           </li>
+
 
           <li>
             兒童服事場地於聚會會場旁，
@@ -1237,9 +2119,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          05 生活提醒
-    ========================== -->
+    ================================================== -->
 
     <details>
 
@@ -1253,7 +2135,10 @@
           生活提醒
         </span>
 
-        <span class="arrow"></span>
+        <span
+          class="arrow"
+          aria-hidden="true"
+        ></span>
 
       </summary>
 
@@ -1267,11 +2152,13 @@
             請於特會前自行攜帶。
           </li>
 
+
           <li>
             特會期間各項事務服事皆由聖徒配搭，
             請留意並依照大會及各照顧區通知，
             準時於指定地點集合。
           </li>
+
 
           <li>
             有感冒症狀者，
@@ -1290,6 +2177,7 @@
   </section>
 
 
+
   <footer>
     2026年高屏澎青職特會
   </footer>
@@ -1298,13 +2186,15 @@
 </main>
 
 
+
 <script>
+
   /*
-   * 頁面開啟時：
-   * 五個項目全部收合
+   * 進入頁面：
+   * 五個項目全部保持收合。
    *
-   * 使用者展開其中一項時：
-   * 自動收合其他項目
+   * 展開其中一項：
+   * 自動收合其他項目。
    */
 
   const detailItems =
@@ -1313,27 +2203,30 @@
 
   detailItems.forEach((item) => {
 
-    item.removeAttribute("open");
+    item.addEventListener(
+      "toggle",
+      () => {
 
-
-    item.addEventListener("toggle", () => {
-
-      if (!item.open) {
-        return;
-      }
-
-
-      detailItems.forEach((otherItem) => {
-
-        if (otherItem !== item) {
-          otherItem.open = false;
+        if (!item.open) {
+          return;
         }
 
-      });
 
-    });
+        detailItems.forEach(
+          (otherItem) => {
+
+            if (otherItem !== item) {
+              otherItem.open = false;
+            }
+
+          }
+        );
+
+      }
+    );
 
   });
+
 </script>
 
 
