@@ -11,18 +11,14 @@
       --blue: #4d9be8;
       --blue-dark: #286aa8;
       --blue-light: #c9dff2;
-
       --cream: #f7f6f2;
       --white: #ffffff;
-
       --beige: #e9e0d7;
       --brown: #a87543;
-
       --text: #263743;
       --gray: #6b7881;
       --line: #e2e7ea;
-
-      --shadow: 0 12px 32px rgba(43, 72, 92, 0.09);
+      --shadow: 0 12px 32px rgba(43,72,92,.09);
     }
 
     * {
@@ -36,16 +32,8 @@
     body {
       margin: 0;
       background:
-        radial-gradient(
-          circle at 10% 5%,
-          rgba(77, 155, 232, 0.12),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 92% 18%,
-          rgba(168, 117, 67, 0.08),
-          transparent 24%
-        ),
+        radial-gradient(circle at 10% 5%, rgba(77,155,232,.12), transparent 28%),
+        radial-gradient(circle at 92% 18%, rgba(168,117,67,.08), transparent 24%),
         var(--cream);
 
       color: var(--text);
@@ -72,18 +60,18 @@
 
     .hero {
       position: relative;
-
       overflow: hidden;
-
-      min-height: 280px;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
 
       padding: 46px 42px;
 
       background:
         linear-gradient(
           135deg,
-          rgba(255,255,255,0.97),
-          rgba(255,255,255,0.75)
+          rgba(255,255,255,.97),
+          rgba(255,255,255,.75)
         ),
         linear-gradient(
           135deg,
@@ -92,17 +80,12 @@
         );
 
       border-radius: 30px;
-
-      border: 1px solid rgba(255,255,255,0.9);
-
+      border: 1px solid rgba(255,255,255,.9);
       box-shadow: var(--shadow);
     }
 
-    /* 幾何裝飾 */
-
     .hero::before {
       content: "";
-
       position: absolute;
 
       width: 280px;
@@ -113,16 +96,15 @@
 
       border-radius: 50%;
 
-      background: rgba(77,155,232,0.18);
+      background: rgba(77,155,232,.18);
 
       box-shadow:
-        -65px 95px 0 -28px rgba(201,223,242,0.7),
-        -130px 155px 0 -52px rgba(168,117,67,0.18);
+        -65px 95px 0 -28px rgba(201,223,242,.7),
+        -130px 155px 0 -52px rgba(168,117,67,.18);
     }
 
     .hero::after {
       content: "";
-
       position: absolute;
 
       width: 180px;
@@ -132,117 +114,21 @@
       bottom: -105px;
 
       border-radius: 50%;
-
-      border: 22px solid rgba(168,117,67,0.13);
-    }
-
-    .hero-small {
-      position: relative;
-      z-index: 2;
-
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-
-      padding: 7px 14px;
-
-      border-radius: 100px;
-
-      background: rgba(77,155,232,0.12);
-
-      color: var(--blue-dark);
-
-      font-size: 14px;
-      font-weight: 800;
-
-      letter-spacing: 1px;
-    }
-
-    .hero-small::before {
-      content: "";
-
-      width: 8px;
-      height: 8px;
-
-      border-radius: 50%;
-
-      background: var(--blue);
+      border: 22px solid rgba(168,117,67,.13);
     }
 
     h1 {
       position: relative;
       z-index: 2;
 
-      max-width: 700px;
-
-      margin: 18px 0 10px;
+      max-width: 760px;
+      margin: 0;
 
       font-size: clamp(32px, 5vw, 54px);
-
-      line-height: 1.2;
-
+      line-height: 1.25;
       letter-spacing: -1.5px;
 
       color: #203849;
-    }
-
-    .hero-description {
-      position: relative;
-      z-index: 2;
-
-      margin: 0;
-
-      font-size: 18px;
-      font-weight: 600;
-
-      color: var(--gray);
-    }
-
-    .date-area {
-      position: relative;
-      z-index: 2;
-
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-      margin-top: 28px;
-    }
-
-    .date-item {
-      display: flex;
-      align-items: center;
-
-      gap: 9px;
-
-      padding: 9px 14px;
-
-      background: rgba(255,255,255,0.8);
-
-      border: 1px solid rgba(77,155,232,0.18);
-
-      border-radius: 14px;
-
-      font-weight: 800;
-
-      color: #3a586a;
-    }
-
-    .date-item strong {
-      display: grid;
-      place-items: center;
-
-      width: 30px;
-      height: 30px;
-
-      border-radius: 9px;
-
-      background: var(--blue);
-
-      color: white;
-
-      font-size: 13px;
     }
 
 
@@ -298,11 +184,9 @@
 
     .hint {
       text-align: center;
-
       margin-bottom: 18px;
 
       color: #7a858c;
-
       font-size: 14px;
     }
 
@@ -314,24 +198,22 @@
     details {
       overflow: hidden;
 
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,.9);
 
-      border: 1px solid rgba(53,79,96,0.12);
-
+      border: 1px solid rgba(53,79,96,.12);
       border-radius: 22px;
 
       box-shadow:
         0 7px 22px
-        rgba(50,75,92,0.06);
+        rgba(50,75,92,.06);
     }
 
     details[open] {
-      border-color:
-        rgba(77,155,232,0.28);
+      border-color: rgba(77,155,232,.28);
 
       box-shadow:
         0 14px 32px
-        rgba(50,75,92,0.09);
+        rgba(50,75,92,.09);
     }
 
     summary {
@@ -343,9 +225,7 @@
       padding: 18px 21px;
 
       cursor: pointer;
-
       list-style: none;
-
       user-select: none;
 
       font-size: 19px;
@@ -372,12 +252,11 @@
       background: var(--blue);
 
       color: white;
-
       font-size: 14px;
 
       box-shadow:
         0 7px 16px
-        rgba(77,155,232,0.24);
+        rgba(77,155,232,.24);
     }
 
     details:nth-child(2) .number {
@@ -385,15 +264,15 @@
     }
 
     details:nth-child(3) .number {
-      background: #bda38b;
+      background: var(--blue-dark);
     }
 
     details:nth-child(4) .number {
-      background: var(--brown);
+      background: #bda38b;
     }
 
     details:nth-child(5) .number {
-      background: var(--blue-dark);
+      background: var(--brown);
     }
 
     .title {
@@ -418,7 +297,6 @@
       content: "";
 
       position: absolute;
-
       top: 16px;
 
       width: 9px;
@@ -428,7 +306,7 @@
 
       background: #637885;
 
-      transition: 0.2s;
+      transition: .2s;
     }
 
     .arrow::before {
@@ -450,25 +328,20 @@
     }
 
     .content {
-      padding:
-        5px
-        22px
-        22px;
+      padding: 5px 22px 22px;
 
       border-top:
         1px solid
-        rgba(53,79,96,0.11);
+        rgba(53,79,96,.11);
     }
 
     .content ol {
       margin: 14px 0 0;
-
       padding-left: 1.5em;
     }
 
     .content li {
       margin: 11px 0;
-
       padding-left: 4px;
     }
 
@@ -480,10 +353,30 @@
       border-radius: 7px;
 
       background:
-        rgba(77,155,232,0.11);
+        rgba(77,155,232,.11);
 
       color: var(--blue-dark);
 
+      font-weight: 800;
+    }
+
+    .meeting-note {
+      margin: 16px 0 8px;
+
+      padding: 13px 16px;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(77,155,232,.12),
+          rgba(201,223,242,.2)
+        );
+
+      border-left: 4px solid var(--blue);
+
+      color: #36586d;
       font-weight: 800;
     }
 
@@ -508,7 +401,6 @@
 
     table {
       width: 100%;
-
       min-width: 620px;
 
       border-collapse: collapse;
@@ -545,7 +437,6 @@
       background: #edf6fc;
 
       color: #2c526a;
-
       font-size: 16px;
     }
 
@@ -555,7 +446,6 @@
       background: #fafcfd;
 
       color: #4b606d;
-
       font-weight: 800;
 
       white-space: nowrap;
@@ -563,12 +453,12 @@
 
     .sat {
       background:
-        rgba(201,223,242,0.33);
+        rgba(201,223,242,.33);
     }
 
     .sun {
       background:
-        rgba(233,224,215,0.38);
+        rgba(233,224,215,.38);
     }
 
 
@@ -604,13 +494,11 @@
       background: #edf6fc;
 
       color: #2c526a;
-
       font-size: 17px;
     }
 
     .day.sunday h3 {
       background: #f3ece5;
-
       color: #795b3c;
     }
 
@@ -634,9 +522,7 @@
 
     .schedule-item time {
       color: #506775;
-
       font-weight: 800;
-
       white-space: nowrap;
     }
 
@@ -651,27 +537,25 @@
       text-align: center;
 
       color: #818a90;
-
       font-size: 13px;
     }
 
 
     /* =========================
-       手機
+       手機版
     ========================== */
 
     @media (max-width: 700px) {
 
       .page {
         width: calc(100% - 20px);
-
         padding-top: 10px;
       }
 
       .hero {
-        min-height: 240px;
+        min-height: 210px;
 
-        padding: 34px 22px 30px;
+        padding: 34px 22px;
 
         border-radius: 24px;
       }
@@ -682,10 +566,6 @@
           10vw,
           42px
         );
-      }
-
-      .hero-description {
-        font-size: 16px;
       }
 
       summary {
@@ -726,43 +606,22 @@
 
 <main class="page">
 
+
   <!-- ======================
-       封面
+       標題
   ======================= -->
 
   <section class="hero">
-
-    <div class="hero-small">
-      2026 高屏澎青職特會
-    </div>
 
     <h1>
       2026年高屏澎青職特會<br>
       行前通知
     </h1>
 
-    <p class="hero-description">
-      請依各項通知預備，並準時前往指定地點。
-    </p>
-
-    <div class="date-area">
-
-      <div class="date-item">
-        <strong>六</strong>
-        10/3 週六
-      </div>
-
-      <div class="date-item">
-        <strong>日</strong>
-        10/4 主日
-      </div>
-
-    </div>
-
   </section>
 
 
-  <!-- 配色參考 -->
+  <!-- 配色條 -->
 
   <div class="color-line">
     <div></div>
@@ -785,9 +644,9 @@
   <section class="accordion">
 
 
-    <!-- 01 -->
+    <!-- 01 住宿用餐 -->
 
-    <details open>
+    <details>
 
       <summary>
 
@@ -796,87 +655,7 @@
         </span>
 
         <span class="title">
-          聚會及兒童服事
-        </span>
-
-        <span class="arrow"></span>
-
-      </summary>
-
-      <div class="content">
-
-        <ol>
-
-          <li>
-            聚會會場於飯店大廳下方，
-            請先按照飯店指示牌前往大廳，
-            再依招待服事聖徒指引前往會場。
-          </li>
-
-          <li>
-            提前
-            <span class="time">
-              5 分鐘
-            </span>
-            就座，並為聚會禱告。
-            第一堂聚會為
-            <span class="time">
-              19:30
-            </span>，
-            鼓勵聖徒們於
-            <span class="time">
-              19:15
-            </span>
-            至會場參加團體禱告。
-          </li>
-
-          <li>
-            <span class="time">
-              18:45
-            </span>
-            開始報到，
-            <span class="time">
-              19:25 前
-            </span>
-            完成報到者，可獲贈特會紀念品。
-          </li>
-
-          <li>
-            聚會時請佩戴名牌。
-            （請自備名牌套，或於現場購買。）
-          </li>
-
-          <li>
-            聚會及配搭服事時請著正式服裝，
-            鞋子以包鞋為主。
-          </li>
-
-          <li>
-            兒童服事場地於聚會會場旁，
-            請先按照飯店指示牌前往大廳，
-            再依招待服事聖徒指引前往兒童服事場地。
-          </li>
-
-        </ol>
-
-      </div>
-
-    </details>
-
-
-
-    <!-- 02 -->
-
-    <details>
-
-      <summary>
-
-        <span class="number">
-          02
-        </span>
-
-        <span class="title">
-          福華度假飯店住宿、用餐
+          住宿、用餐
         </span>
 
         <span class="arrow"></span>
@@ -923,14 +702,14 @@
 
 
 
-    <!-- 03 -->
+    <!-- 02 停車 -->
 
     <details>
 
       <summary>
 
         <span class="number">
-          03
+          02
         </span>
 
         <span class="title">
@@ -973,62 +752,14 @@
 
 
 
-    <!-- 04 -->
+    <!-- 03 時間表 -->
 
     <details>
 
       <summary>
 
         <span class="number">
-          04
-        </span>
-
-        <span class="title">
-          生活
-        </span>
-
-        <span class="arrow"></span>
-
-      </summary>
-
-      <div class="content">
-
-        <ol>
-
-          <li>
-            個人身體因素需服用藥品，
-            請於特會前自行攜帶。
-          </li>
-
-          <li>
-            特會期間各項事務服事皆由聖徒配搭，
-            請留意並依照大會及各照顧區通知，
-            準時於指定地點集合。
-          </li>
-
-          <li>
-            有感冒症狀者，
-            請根據身體狀況評估是否赴會；
-            若仍赴會，
-            請務必配戴口罩。
-          </li>
-
-        </ol>
-
-      </div>
-
-    </details>
-
-
-
-    <!-- 05 時間表 -->
-
-    <details>
-
-      <summary>
-
-        <span class="number">
-          05
+          03
         </span>
 
         <span class="title">
@@ -1247,63 +978,28 @@
             </h3>
 
             <div class="schedule-item">
-
-              <time>
-                06:00～15:00
-              </time>
-
-              <div>
-                各路線相調
-              </div>
-
+              <time>06:00～15:00</time>
+              <div>各路線相調</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                15:00～17:00
-              </time>
-
-              <div>
-                入住 check-in
-              </div>
-
+              <time>15:00～17:00</time>
+              <div>入住 check-in</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                17:00～19:00
-              </time>
-
-              <div>
-                晚餐
-              </div>
-
+              <time>17:00～19:00</time>
+              <div>晚餐</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                19:30～21:00
-              </time>
-
-              <div>
-                信息一
-              </div>
-
+              <time>19:30～21:00</time>
+              <div>信息一</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                21:00～22:00
-              </time>
-
-              <div>
-                專題一
-              </div>
-
+              <time>21:00～22:00</time>
+              <div>專題一</div>
             </div>
 
           </section>
@@ -1317,87 +1013,38 @@
             </h3>
 
             <div class="schedule-item">
-
-              <time>
-                06:00～06:30
-              </time>
-
-              <div>
-                起牀、盥洗
-              </div>
-
+              <time>06:00～06:30</time>
+              <div>起牀、盥洗</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                06:30～07:30
-              </time>
-
-              <div>
-                海邊晨興
-              </div>
-
+              <time>06:30～07:30</time>
+              <div>海邊晨興</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                07:30～09:00
-              </time>
-
-              <div>
-                早餐
-              </div>
-
+              <time>07:30～09:00</time>
+              <div>早餐</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                09:00～09:30
-              </time>
-
-              <div>
-                擘餅聚會
-              </div>
-
+              <time>09:00～09:30</time>
+              <div>擘餅聚會</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                09:30～11:05
-              </time>
-
-              <div>
-                信息二
-              </div>
-
+              <time>09:30～11:05</time>
+              <div>信息二</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                11:05～11:30
-              </time>
-
-              <div>
-                專題二
-              </div>
-
+              <time>11:05～11:30</time>
+              <div>專題二</div>
             </div>
 
             <div class="schedule-item">
-
-              <time>
-                11:30～15:00
-              </time>
-
-              <div>
-                賦歸
-              </div>
-
+              <time>11:30～15:00</time>
+              <div>賦歸</div>
             </div>
 
           </section>
@@ -1409,11 +1056,143 @@
     </details>
 
 
+
+    <!-- 04 聚會及兒童服事 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          04
+        </span>
+
+        <span class="title">
+          聚會及兒童服事
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <div class="meeting-note">
+          請依各項通知預備，並準時前往指定地點。
+        </div>
+
+        <ol>
+
+          <li>
+            聚會會場於飯店大廳下方，
+            請先按照飯店指示牌前往大廳，
+            再依招待服事聖徒指引前往會場。
+          </li>
+
+          <li>
+            提前
+            <span class="time">
+              5 分鐘
+            </span>
+            就座，並為聚會禱告。
+            第一堂聚會為
+            <span class="time">
+              19:30
+            </span>，
+            鼓勵聖徒們於
+            <span class="time">
+              19:15
+            </span>
+            至會場參加團體禱告。
+          </li>
+
+          <li>
+            <span class="time">
+              18:45
+            </span>
+            開始報到，
+            <span class="time">
+              19:25 前
+            </span>
+            完成報到者，可獲贈特會紀念品。
+          </li>
+
+          <li>
+            聚會時請佩戴名牌。
+            （請自備名牌套，或於現場購買。）
+          </li>
+
+          <li>
+            聚會及配搭服事時請著正式服裝，
+            鞋子以包鞋為主。
+          </li>
+
+          <li>
+            兒童服事場地於聚會會場旁，
+            請先按照飯店指示牌前往大廳，
+            再依招待服事聖徒指引前往兒童服事場地。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- 05 生活提醒 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          05
+        </span>
+
+        <span class="title">
+          生活提醒
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <ol>
+
+          <li>
+            個人身體因素需服用藥品，
+            請於特會前自行攜帶。
+          </li>
+
+          <li>
+            特會期間各項事務服事皆由聖徒配搭，
+            請留意並依照大會及各照顧區通知，
+            準時於指定地點集合。
+          </li>
+
+          <li>
+            有感冒症狀者，
+            請根據身體狀況評估是否赴會；
+            若仍赴會，
+            請務必配戴口罩。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
   </section>
 
 
   <footer>
-    2026年高屏澎青職特會｜行前通知
+    2026年高屏澎青職特會
   </footer>
 
 </main>
@@ -1421,13 +1200,16 @@
 
 <script>
   /*
-   * 每次只展開一個大項目
+   * 所有項目進入頁面時均保持收合。
+   * 展開一項時，自動收合其他項目。
    */
 
   const detailItems =
     document.querySelectorAll("details");
 
   detailItems.forEach((item) => {
+
+    item.removeAttribute("open");
 
     item.addEventListener(
       "toggle",
