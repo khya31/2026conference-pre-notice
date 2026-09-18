@@ -4,9 +4,8 @@
   --blue-light: #c9dff2;
   --blue-pale: #edf6fc;
   --cream: #f7f6f2;
-  --white: #ffffff;
+  --white: #fff;
   --beige: #e9e0d7;
-  --beige-light: #f3eee8;
   --brown: #a87543;
   --text: #263743;
   --text-dark: #203849;
@@ -40,9 +39,7 @@ body {
 }
 
 
-/* ==================================================
-   HERO
-================================================== */
+/* ===== 標題 ===== */
 
 .hero {
   position: relative;
@@ -51,9 +48,9 @@ body {
   display: flex;
   align-items: center;
   padding: 46px 50px;
-  border-radius: 32px;
-  background: linear-gradient(120deg, #ffffff 0%, #fbfcfc 50%, #eff6f9 100%);
   border: 1px solid rgba(255,255,255,.95);
+  border-radius: 32px;
+  background: linear-gradient(120deg, #fff 0%, #fbfcfc 50%, #eff6f9 100%);
   box-shadow: 0 18px 44px rgba(42,72,91,.12);
   isolation: isolate;
 }
@@ -79,11 +76,6 @@ body {
   line-height: 1.15;
   letter-spacing: -2px;
 }
-
-
-/* ==================================================
-   行前通知
-================================================== */
 
 .notice-tag {
   position: relative;
@@ -114,15 +106,13 @@ body {
 }
 
 
-/* ==================================================
-   HERO 幾何美術
-================================================== */
+/* ===== 標題幾何美術 ===== */
 
 .hero-art {
   position: absolute;
   inset: 0;
-  pointer-events: none;
   z-index: 1;
+  pointer-events: none;
 }
 
 .shape {
@@ -182,8 +172,8 @@ body {
   height: 270px;
   left: 90px;
   bottom: -220px;
-  border-radius: 50%;
   border: 29px solid rgba(226,215,203,.75);
+  border-radius: 50%;
 }
 
 .shape-brown-line {
@@ -215,9 +205,7 @@ body {
 }
 
 
-/* ==================================================
-   配色裝飾條
-================================================== */
+/* ===== 配色條 ===== */
 
 .color-strip {
   display: grid;
@@ -237,11 +225,6 @@ body {
 .color-strip span:nth-child(4) { background: var(--beige); }
 .color-strip span:nth-child(5) { background: var(--brown); }
 
-
-/* ==================================================
-   提示文字
-================================================== */
-
 .hint {
   margin: 0 0 20px;
   color: #89949a;
@@ -250,9 +233,7 @@ body {
 }
 
 
-/* ==================================================
-   ACCORDION
-================================================== */
+/* ===== 摺疊項目 ===== */
 
 .accordion {
   display: grid;
@@ -277,22 +258,17 @@ summary {
   align-items: center;
   gap: 15px;
   padding: 19px 21px;
-  cursor: pointer;
-  list-style: none;
   color: #294355;
   font-size: 19px;
   font-weight: 900;
+  list-style: none;
+  cursor: pointer;
   user-select: none;
 }
 
 summary::-webkit-details-marker {
   display: none;
 }
-
-
-/* ==================================================
-   項目編號
-================================================== */
 
 .number {
   flex: 0 0 auto;
@@ -301,16 +277,15 @@ summary::-webkit-details-marker {
   width: 43px;
   height: 43px;
   color: #fff;
-  background: var(--blue);
   border-radius: 14px;
   font-size: 14px;
   box-shadow: 0 7px 16px rgba(77,155,232,.24);
 }
 
 details:nth-child(1) .number { background: #4d9be8; }
-details:nth-child(2) .number { background: #79afd8; }
+details:nth-child(2) .number { background: #70add8; }
 details:nth-child(3) .number { background: #91b9cf; }
-details:nth-child(4) .number { background: #bda38b; }
+details:nth-child(4) .number { background: #c1a58c; }
 details:nth-child(5) .number { background: #a87543; }
 details:nth-child(6) .number { background: #397faf; }
 
@@ -319,9 +294,7 @@ details:nth-child(6) .number { background: #397faf; }
 }
 
 
-/* ==================================================
-   展開箭頭
-================================================== */
+/* ===== 箭頭 ===== */
 
 .arrow {
   position: relative;
@@ -363,9 +336,7 @@ details[open] .arrow::after {
 }
 
 
-/* ==================================================
-   展開內容
-================================================== */
+/* ===== 內文 ===== */
 
 .content {
   padding: 7px 23px 23px;
@@ -387,13 +358,11 @@ details[open] .arrow::after {
 }
 
 .item-subline {
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 
-/* ==================================================
-   時間表
-================================================== */
+/* ===== 時間表 ===== */
 
 .schedule-wrapper {
   width: 100%;
@@ -424,11 +393,11 @@ details[open] .arrow::after {
 
 .schedule-table th:last-child,
 .schedule-table td:last-child {
-  border-right: none;
+  border-right: 0;
 }
 
 .schedule-table tbody tr:last-child td {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .schedule-table thead th {
@@ -438,9 +407,14 @@ details[open] .arrow::after {
   font-weight: 900;
 }
 
-.schedule-table th:nth-child(1) { width: 28%; }
+.schedule-table th:nth-child(1) {
+  width: 28%;
+}
+
 .schedule-table th:nth-child(2),
-.schedule-table th:nth-child(3) { width: 36%; }
+.schedule-table th:nth-child(3) {
+  width: 36%;
+}
 
 .time-cell {
   color: #4b606d;
@@ -467,9 +441,7 @@ details[open] .arrow::after {
 }
 
 
-/* ==================================================
-   頁尾
-================================================== */
+/* ===== 頁尾 ===== */
 
 footer {
   margin-top: 29px;
@@ -479,12 +451,9 @@ footer {
 }
 
 
-/* ==================================================
-   手機版
-================================================== */
+/* ===== 手機 ===== */
 
 @media (max-width: 700px) {
-
   .page {
     width: calc(100% - 20px);
     padding-top: 10px;
@@ -493,7 +462,6 @@ footer {
   .hero {
     min-height: 245px;
     padding: 35px 23px;
-    align-items: center;
     border-radius: 25px;
   }
 
@@ -508,7 +476,7 @@ footer {
   }
 
   #page-title {
-    width: 81%;
+    width: 82%;
     font-size: clamp(30px, 9vw, 42px);
     line-height: 1.17;
     letter-spacing: -1px;
@@ -620,20 +588,13 @@ footer {
   }
 }
 
-
-/* ==================================================
-   很窄的手機
-================================================== */
-
 @media (max-width: 390px) {
-
   #page-title {
-    width: 85%;
+    width: 86%;
     font-size: 29px;
   }
 
   summary {
     font-size: 16px;
   }
-
 }
