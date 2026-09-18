@@ -75,19 +75,14 @@
 
     .page {
       width: min(960px, calc(100% - 28px));
-
       margin: 0 auto;
-
-      padding:
-        28px
-        0
-        60px;
+      padding: 28px 0 60px;
     }
 
 
 
     /* ==================================================
-       標題主視覺
+       標題卡片
     ================================================== */
 
     .hero {
@@ -95,14 +90,12 @@
 
       overflow: hidden;
 
-      min-height: 310px;
+      min-height: 260px;
 
       display: flex;
       align-items: center;
 
-      padding:
-        48px
-        50px;
+      padding: 48px 50px;
 
       border-radius: 32px;
 
@@ -110,7 +103,7 @@
         linear-gradient(
           120deg,
           #ffffff 0%,
-          #fbfcfc 48%,
+          #fbfcfc 52%,
           #eef5f8 100%
         );
 
@@ -123,8 +116,6 @@
       isolation: isolate;
     }
 
-
-    /* 左上大圓 */
 
     .hero::before {
       content: "";
@@ -147,8 +138,6 @@
       z-index: -1;
     }
 
-
-    /* 右下圓弧 */
 
     .hero::after {
       content: "";
@@ -176,46 +165,9 @@
 
       z-index: 5;
 
-      width: 72%;
+      width: 73%;
     }
 
-
-    /* 上方小標 */
-
-    .hero-topline {
-      display: flex;
-
-      align-items: center;
-
-      gap: 10px;
-
-      margin-bottom: 16px;
-
-      color: var(--blue-dark);
-
-      font-size: 13px;
-
-      font-weight: 900;
-
-      letter-spacing: .14em;
-    }
-
-
-    .hero-topline::before {
-      content: "";
-
-      display: block;
-
-      width: 42px;
-      height: 4px;
-
-      border-radius: 100px;
-
-      background: var(--brown);
-    }
-
-
-    /* 主標題 */
 
     .hero-title-area {
       display: flex;
@@ -224,9 +176,7 @@
 
       flex-wrap: wrap;
 
-      gap:
-        13px
-        17px;
+      gap: 14px 18px;
     }
 
 
@@ -237,9 +187,9 @@
 
       font-size:
         clamp(
-          33px,
+          34px,
           5vw,
-          55px
+          56px
         );
 
       font-weight: 950;
@@ -250,7 +200,7 @@
     }
 
 
-    /* 行前通知做成特殊標籤 */
+    /* 行前通知特殊標籤 */
 
     .notice-tag {
       position: relative;
@@ -258,13 +208,12 @@
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       padding:
-        8px
-        17px
-        9px;
+        9px
+        18px
+        10px;
 
       background: var(--blue);
 
@@ -272,12 +221,12 @@
 
       border-radius:
         9px
-        18px
+        19px
         9px
-        18px;
+        19px;
 
       box-shadow:
-        0 8px 18px rgba(77,155,232,.25);
+        0 9px 20px rgba(77,155,232,.28);
 
       font-size:
         clamp(
@@ -304,8 +253,8 @@
       right: -11px;
       bottom: 7px;
 
-      width: 19px;
-      height: 19px;
+      width: 20px;
+      height: 20px;
 
       background: var(--blue);
 
@@ -318,96 +267,9 @@
     }
 
 
-    /* 日期區 */
-
-    .hero-date-row {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      align-items: center;
-
-      gap: 10px;
-
-      margin-top: 27px;
-    }
-
-
-    .date-card {
-      display: flex;
-
-      align-items: center;
-
-      gap: 10px;
-
-      padding:
-        8px
-        13px;
-
-      border-radius: 13px;
-
-      background:
-        rgba(255,255,255,.84);
-
-      border:
-        1px solid
-        rgba(77,155,232,.18);
-
-      color: #405c6d;
-
-      font-size: 15px;
-
-      font-weight: 800;
-
-      box-shadow:
-        0 5px 13px
-        rgba(55,83,101,.05);
-    }
-
-
-    .date-card strong {
-      display: grid;
-
-      place-items: center;
-
-      min-width: 31px;
-      height: 31px;
-
-      padding:
-        0
-        7px;
-
-      border-radius: 9px;
-
-      background: var(--blue);
-
-      color: #ffffff;
-
-      font-size: 13px;
-    }
-
-
-    .date-card:nth-child(2) strong {
-      background: var(--brown);
-    }
-
-
-    .hero-en {
-      margin-left: 3px;
-
-      color: #89969e;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      letter-spacing: .14em;
-    }
-
-
 
     /* ==================================================
-       右側幾何設計
+       標題右側幾何圖形
     ================================================== */
 
     .hero-art {
@@ -459,6 +321,8 @@
       background: var(--beige);
 
       transform: rotate(14deg);
+
+      opacity: .93;
 
       box-shadow:
         0 10px 25px
@@ -576,10 +440,7 @@
 
       height: 13px;
 
-      margin:
-        18px
-        0
-        30px;
+      margin: 18px 0 30px;
     }
 
 
@@ -615,7 +476,7 @@
 
 
     /* ==================================================
-       摺疊選單
+       提示
     ================================================== */
 
     .hint {
@@ -628,6 +489,11 @@
       font-size: 14px;
     }
 
+
+
+    /* ==================================================
+       五大摺疊項目
+    ================================================== */
 
     .accordion {
       display: grid;
@@ -671,9 +537,7 @@
 
       gap: 15px;
 
-      padding:
-        18px
-        21px;
+      padding: 18px 21px;
 
       cursor: pointer;
 
@@ -816,30 +680,30 @@
 
 
     .content ol {
-      margin:
-        14px
-        0
-        0;
+      margin: 14px 0 0;
 
-      padding-left: 1.5em;
+      padding-left: 1.55em;
     }
 
 
     .content li {
-      margin:
-        11px
-        0;
+      margin: 13px 0;
 
       padding-left: 4px;
+    }
+
+
+    .subline {
+      display: block;
+
+      margin-top: 4px;
     }
 
 
     .time {
       display: inline-block;
 
-      padding:
-        0
-        7px;
+      padding: 0 7px;
 
       border-radius: 7px;
 
@@ -854,18 +718,13 @@
 
 
     /* ==================================================
-       聚會提醒文字
+       聚會提醒
     ================================================== */
 
     .meeting-note {
-      margin:
-        16px
-        0
-        8px;
+      margin: 16px 0 10px;
 
-      padding:
-        13px
-        16px;
+      padding: 13px 16px;
 
       border-left:
         4px solid
@@ -892,13 +751,15 @@
 
 
     /* ==================================================
-       桌機版時間表
+       時間表
     ================================================== */
 
     .schedule-table {
       margin-top: 17px;
 
       overflow-x: auto;
+
+      -webkit-overflow-scrolling: touch;
 
       border:
         1px solid
@@ -913,7 +774,7 @@
     table {
       width: 100%;
 
-      min-width: 620px;
+      min-width: 650px;
 
       border-collapse: collapse;
 
@@ -923,9 +784,7 @@
 
     th,
     td {
-      padding:
-        13px
-        15px;
+      padding: 13px 14px;
 
       text-align: center;
 
@@ -962,7 +821,7 @@
 
 
     td:first-child {
-      width: 26%;
+      width: 27%;
 
       background: #fafcfd;
 
@@ -983,85 +842,6 @@
     .sun {
       background:
         rgba(233,224,215,.38);
-    }
-
-
-
-    /* ==================================================
-       手機版時間表
-    ================================================== */
-
-    .mobile-schedule {
-      display: none;
-
-      gap: 14px;
-
-      margin-top: 16px;
-    }
-
-
-    .day {
-      overflow: hidden;
-
-      background: #ffffff;
-
-      border:
-        1px solid
-        var(--line);
-
-      border-radius: 18px;
-    }
-
-
-    .day h3 {
-      margin: 0;
-
-      padding:
-        12px
-        15px;
-
-      background: var(--blue-pale);
-
-      color: #2c526a;
-
-      font-size: 17px;
-    }
-
-
-    .day.sunday h3 {
-      background: #f3ece5;
-
-      color: #795b3c;
-    }
-
-
-    .schedule-item {
-      display: grid;
-
-      grid-template-columns:
-        115px
-        1fr;
-
-      gap: 10px;
-
-      padding:
-        11px
-        14px;
-
-      border-top:
-        1px solid
-        var(--line);
-
-      font-size: 14px;
-    }
-
-
-    .schedule-item time {
-      color: #506775;
-
-      font-weight: 800;
-
-      white-space: nowrap;
     }
 
 
@@ -1089,26 +869,19 @@
     @media (max-width: 700px) {
 
       .page {
-        width:
-          calc(100% - 20px);
+        width: calc(100% - 20px);
 
         padding-top: 10px;
       }
 
 
-      /* -------------------------
-         手機標題
-      ------------------------- */
-
       .hero {
-        min-height: 285px;
+        min-height: 230px;
 
         padding:
-          31px
+          34px
           23px
-          35px;
-
-        align-items: flex-end;
+          34px;
 
         border-radius: 25px;
       }
@@ -1119,34 +892,22 @@
       }
 
 
-      .hero-topline {
-        margin-bottom: 11px;
-
-        font-size: 11px;
-      }
-
-
-      .hero-topline::before {
-        width: 28px;
-      }
-
-
       .hero-title-area {
+        position: relative;
+
+        z-index: 5;
+
         display: block;
       }
 
 
       .hero-title {
-        position: relative;
-
-        z-index: 5;
-
         width: 82%;
 
         font-size:
           clamp(
             30px,
-            8.8vw,
+            9vw,
             42px
           );
 
@@ -1157,74 +918,29 @@
 
 
       /*
-        手機版將「行前通知」做成獨立設計標籤，
-        不是一般標題換行。
-      */
+       * 行前通知不是普通換行，
+       * 而是獨立的視覺標籤
+       */
 
       .notice-tag {
-        margin-top: 11px;
+        margin-top: 13px;
 
         padding:
-          6px
-          13px
-          7px;
+          7px
+          14px
+          8px;
 
-        font-size: 17px;
+        font-size: 18px;
 
         border-radius:
           8px
-          15px
+          16px
           8px
-          15px;
-
-        transform: rotate(-2deg);
+          16px;
       }
 
 
-      .notice-tag::after {
-        right: -8px;
-
-        width: 14px;
-        height: 14px;
-      }
-
-
-      .hero-date-row {
-        gap: 7px;
-
-        margin-top: 18px;
-      }
-
-
-      .date-card {
-        padding:
-          6px
-          9px;
-
-        font-size: 13px;
-      }
-
-
-      .date-card strong {
-        min-width: 26px;
-        height: 26px;
-
-        font-size: 11px;
-      }
-
-
-      .hero-en {
-        width: 100%;
-
-        margin-top: 3px;
-
-        font-size: 9px;
-      }
-
-
-      /* -------------------------
-         手機右側幾何圖
-      ------------------------- */
+      /* 手機右側幾何 */
 
       .hero-art {
         width: 55%;
@@ -1249,7 +965,7 @@
 
         border-radius: 19px;
 
-        opacity: .86;
+        opacity: .80;
       }
 
 
@@ -1298,10 +1014,6 @@
       }
 
 
-      /* -------------------------
-         項目
-      ------------------------- */
-
       summary {
         gap: 12px;
 
@@ -1327,15 +1039,9 @@
       }
 
 
-      /* 手機不用桌機表格 */
-
       .schedule-table {
-        display: none;
-      }
-
-
-      .mobile-schedule {
-        display: grid;
+        margin-left: -2px;
+        margin-right: -2px;
       }
 
     }
@@ -1355,22 +1061,8 @@
       }
 
 
-      .date-card {
-        font-size: 12px;
-      }
-
-
       summary {
         font-size: 16px;
-      }
-
-
-      .schedule-item {
-        grid-template-columns:
-          105px
-          1fr;
-
-        font-size: 13px;
       }
 
     }
@@ -1385,22 +1077,17 @@
 
 
   <!-- ==================================================
-       標題主視覺
+       標題
   ================================================== -->
 
   <section class="hero">
 
     <div class="hero-content">
 
-      <div class="hero-topline">
-        2026 KAO－PING－PENG
-      </div>
-
-
       <div class="hero-title-area">
 
         <h1 class="hero-title">
-          高屏澎青職特會
+          2026年高屏澎青職特會
         </h1>
 
         <div class="notice-tag">
@@ -1409,29 +1096,8 @@
 
       </div>
 
-
-      <div class="hero-date-row">
-
-        <div class="date-card">
-          <strong>六</strong>
-          10 / 3
-        </div>
-
-        <div class="date-card">
-          <strong>日</strong>
-          10 / 4
-        </div>
-
-        <div class="hero-en">
-          YOUNG WORKING SAINTS CONFERENCE
-        </div>
-
-      </div>
-
     </div>
 
-
-    <!-- 右側幾何裝飾 -->
 
     <div
       class="hero-art"
@@ -1483,7 +1149,7 @@
 
 
   <!-- ==================================================
-       五個大項目
+       五大項目
   ================================================== -->
 
   <section class="accordion">
@@ -1518,32 +1184,16 @@
         <ol>
 
           <li>
-            <span class="time">
-              15:00
+            15:00開放辦理入住。
+
+            <span class="subline">
+              辦理入住時間及位置：15:00~16:30於飯店大廳左側，茶水點心區旁。
             </span>
-            開放辦理入住。
           </li>
 
 
           <li>
-            辦理入住時間及位置：
-            <span class="time">
-              15:00～16:30
-            </span>
-            於飯店大廳左側，茶水點心區旁。
-          </li>
-
-
-          <li>
-            晚餐於
-            <span class="time">
-              17:00
-            </span>
-            開始，請於
-            <span class="time">
-              16:30前
-            </span>
-            辦理入住。
+            晚餐於17:00開始，請於16:30前辦理入住。
           </li>
 
         </ol>
@@ -1583,23 +1233,17 @@
         <ol>
 
           <li>
-            飯店附平面及地下停車場；地下停車場無電梯通往一樓，
-            如有行動不便者，請先至飯店大門下車。
+            飯店附平面及地下停車場；地下停車場無電梯通往一樓，如有行動不便者，請先至飯店大門下車。
           </li>
 
 
           <li>
-            非住宿於福華飯店者，
-            請告知車道入口工作人員來參加
-            「高雄市召會活動」，
-            即可入內停車。
+            非住宿於福華飯店者，請告知車道入口工作人員來參加『高雄市召會活動』，即可入內停車。
           </li>
 
 
           <li>
-            飯店車位有限，
-            會優先提供給住宿於飯店者停放車輛，
-            建議自理住宿的聖徒提早赴會。
+            飯店車位有限，會優先提供給住宿於飯店者停放車輛，建議自理住宿的聖徒提早赴會。
           </li>
 
         </ol>
@@ -1636,9 +1280,6 @@
 
       <div class="content">
 
-
-        <!-- 桌機版 -->
-
         <div class="schedule-table">
 
           <table>
@@ -1652,11 +1293,13 @@
                 </th>
 
                 <th>
-                  10/3 週六
+                  10/3<br>
+                  週六
                 </th>
 
                 <th>
-                  10/4 主日
+                  10/4<br>
+                  主日
                 </th>
 
               </tr>
@@ -1680,7 +1323,7 @@
                 </td>
 
                 <td class="sun">
-                  起牀、盥洗
+                  起牀　盥洗
                 </td>
 
               </tr>
@@ -1829,194 +1472,6 @@
 
         </div>
 
-
-
-        <!-- 手機版 -->
-
-        <div class="mobile-schedule">
-
-
-          <!-- 10/3 -->
-
-          <section class="day">
-
-            <h3>
-              10/3 週六
-            </h3>
-
-
-            <div class="schedule-item">
-
-              <time>
-                06:00～15:00
-              </time>
-
-              <div>
-                各路線相調
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                15:00～17:00
-              </time>
-
-              <div>
-                入住 check-in
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                17:00～19:00
-              </time>
-
-              <div>
-                晚餐
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                19:30～21:00
-              </time>
-
-              <div>
-                信息一
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                21:00～22:00
-              </time>
-
-              <div>
-                專題一
-              </div>
-
-            </div>
-
-          </section>
-
-
-
-          <!-- 10/4 -->
-
-          <section class="day sunday">
-
-            <h3>
-              10/4 主日
-            </h3>
-
-
-            <div class="schedule-item">
-
-              <time>
-                06:00～06:30
-              </time>
-
-              <div>
-                起牀、盥洗
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                06:30～07:30
-              </time>
-
-              <div>
-                海邊晨興
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                07:30～09:00
-              </time>
-
-              <div>
-                早餐
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                09:00～09:30
-              </time>
-
-              <div>
-                擘餅聚會
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                09:30～11:05
-              </time>
-
-              <div>
-                信息二
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                11:05～11:30
-              </time>
-
-              <div>
-                專題二
-              </div>
-
-            </div>
-
-
-            <div class="schedule-item">
-
-              <time>
-                11:30～15:00
-              </time>
-
-              <div>
-                賦歸
-              </div>
-
-            </div>
-
-          </section>
-
-
-        </div>
-
       </div>
 
     </details>
@@ -2057,58 +1512,40 @@
         <ol>
 
           <li>
-            聚會會場於飯店大廳下方，
-            請先按照飯店指示牌前往大廳，
-            再依招待服事聖徒指引前往會場。
+            聚會會場於飯店大廳下方，請先按照飯店指示牌前往大廳，再依招待服事聖徒指引前往會場。
           </li>
 
 
           <li>
-            提前
-            <span class="time">
-              5分鐘
+            提前 5 分鐘就座，並為聚會禱告。
+
+            <span class="subline">
+              第一堂聚會為19:30，鼓勵聖徒們於19:15至會場參加團體禱告。
             </span>
-            就座，並為聚會禱告。
-            第一堂聚會為
-            <span class="time">
-              19:30
-            </span>，
-            鼓勵聖徒們於
-            <span class="time">
-              19:15
+          </li>
+
+
+          <li>
+            18:45開始報到，19:25前完成報到，將贈送特會紀念品。
+
+            <span class="subline">
+              聚會報到時間為18:45，19:25前完成報到者，可獲贈特會紀念品。
             </span>
-            至會場參加團體禱告。
           </li>
 
 
           <li>
-            <span class="time">
-              18:45
-            </span>
-            開始報到，
-            <span class="time">
-              19:25前
-            </span>
-            完成報到者，可獲贈特會紀念品。
+            聚會時請佩戴名牌。（請自備名牌套，或於現場購買。）
           </li>
 
 
           <li>
-            聚會時請佩戴名牌。
-            （請自備名牌套，或於現場購買。）
+            聚會及配搭服事時請著正式服裝，鞋子以包鞋為主。
           </li>
 
 
           <li>
-            聚會及配搭服事時請著正式服裝，
-            鞋子以包鞋為主。
-          </li>
-
-
-          <li>
-            兒童服事場地於聚會會場旁，
-            請先按照飯店指示牌前往大廳，
-            再依招待服事聖徒指引前往兒童服事場地。
+            兒童服事場地於聚會會場旁，請先按照飯店指示牌前往大廳，再依招待服事聖徒指引前往兒童服事場地。
           </li>
 
         </ol>
@@ -2148,23 +1585,17 @@
         <ol>
 
           <li>
-            個人身體因素需服用藥品，
-            請於特會前自行攜帶。
+            個人身體因素需服用藥品，請於特會前自行攜帶。
           </li>
 
 
           <li>
-            特會期間各項事務服事皆由聖徒配搭，
-            請留意並依照大會及各照顧區通知，
-            準時於指定地點集合。
+            特會期間各項事務服事皆由聖徒配搭，請留意並依照大會及各照顧區通知準時於指定地點集合。
           </li>
 
 
           <li>
-            有感冒症狀者，
-            請根據身體狀況評估是否赴會；
-            若仍赴會，
-            請務必配戴口罩。
+            有感冒症狀者，請根據身體狀況評估是否赴會；若仍赴會，請務必配戴口罩。
           </li>
 
         </ol>
@@ -2190,11 +1621,11 @@
 <script>
 
   /*
-   * 進入頁面：
-   * 五個項目全部保持收合。
+   * 進入頁面時：
+   * 五項全部收合。
    *
-   * 展開其中一項：
-   * 自動收合其他項目。
+   * 展開一項時：
+   * 其他項目自動收合。
    */
 
   const detailItems =
@@ -2202,6 +1633,9 @@
 
 
   detailItems.forEach((item) => {
+
+    item.removeAttribute("open");
+
 
     item.addEventListener(
       "toggle",
