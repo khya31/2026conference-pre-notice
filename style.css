@@ -1,1 +1,1955 @@
+:root {
 
+  --blue:
+    #4d9be8;
+
+  --blue-dark:
+    #286aa8;
+
+  --blue-light:
+    #c9dff2;
+
+  --blue-pale:
+    #edf6fc;
+
+  --cream:
+    #f7f6f2;
+
+  --white:
+    #ffffff;
+
+  --beige:
+    #e9e0d7;
+
+  --beige-light:
+    #f3eee8;
+
+  --brown:
+    #a87543;
+
+  --text:
+    #263743;
+
+  --text-dark:
+    #203849;
+
+  --gray:
+    #74818a;
+
+  --line:
+    #e0e6e9;
+
+}
+
+
+
+* {
+
+  box-sizing:
+    border-box;
+
+}
+
+
+
+html {
+
+  scroll-behavior:
+    smooth;
+
+}
+
+
+
+body {
+
+  margin:
+    0;
+
+
+  color:
+    var(--text);
+
+
+  background:
+
+    radial-gradient(
+      circle at 8% 5%,
+      rgba(77,155,232,.09),
+      transparent 27%
+    ),
+
+    radial-gradient(
+      circle at 94% 17%,
+      rgba(168,117,67,.06),
+      transparent 24%
+    ),
+
+    var(--cream);
+
+
+  font-family:
+
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    Arial,
+    sans-serif;
+
+
+  line-height:
+    1.8;
+
+}
+
+
+
+.page {
+
+  width:
+    min(
+      960px,
+      calc(100% - 28px)
+    );
+
+
+  margin:
+    0 auto;
+
+
+  padding:
+    28px 0 60px;
+
+}
+
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+  position:
+    relative;
+
+
+  overflow:
+    hidden;
+
+
+  min-height:
+    255px;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  padding:
+    46px 50px;
+
+
+  border-radius:
+    32px;
+
+
+  background:
+
+    linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #fbfcfc 50%,
+      #eff6f9 100%
+    );
+
+
+  border:
+    1px solid
+    rgba(255,255,255,.95);
+
+
+  box-shadow:
+    0 18px 44px
+    rgba(42,72,91,.12);
+
+
+  isolation:
+    isolate;
+
+}
+
+
+
+.hero-content {
+
+  position:
+    relative;
+
+
+  z-index:
+    10;
+
+
+  width:
+    78%;
+
+}
+
+
+
+.hero-title-row {
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-wrap:
+    wrap;
+
+
+  gap:
+    14px 18px;
+
+}
+
+
+
+#page-title {
+
+  margin:
+    0;
+
+
+  color:
+    var(--text-dark);
+
+
+  font-size:
+    clamp(
+      34px,
+      5vw,
+      55px
+    );
+
+
+  font-weight:
+    950;
+
+
+  line-height:
+    1.15;
+
+
+  letter-spacing:
+    -2px;
+
+}
+
+
+
+/* ==================================================
+   行前通知
+================================================== */
+
+.notice-tag {
+
+  position:
+    relative;
+
+
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  padding:
+    8px 18px 9px;
+
+
+  color:
+    #ffffff;
+
+
+  background:
+    var(--blue);
+
+
+  border-radius:
+    10px 20px 10px 20px;
+
+
+  box-shadow:
+    0 9px 22px
+    rgba(77,155,232,.28);
+
+
+  font-size:
+    clamp(
+      19px,
+      2.5vw,
+      25px
+    );
+
+
+  font-weight:
+    900;
+
+
+  letter-spacing:
+    .12em;
+
+
+  white-space:
+    nowrap;
+
+
+  transform:
+    rotate(-2deg);
+
+}
+
+
+
+.notice-tag::after {
+
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  right:
+    -11px;
+
+
+  bottom:
+    7px;
+
+
+  width:
+    20px;
+
+
+  height:
+    20px;
+
+
+  background:
+    var(--blue);
+
+
+  clip-path:
+
+    polygon(
+      0 0,
+      100% 50%,
+      0 100%
+    );
+
+}
+
+
+
+/* ==================================================
+   HERO 幾何美術
+================================================== */
+
+.hero-art {
+
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  pointer-events:
+    none;
+
+
+  z-index:
+    1;
+
+}
+
+
+
+.shape {
+
+  position:
+    absolute;
+
+}
+
+
+
+/* 左上藍色 */
+
+.shape-blue-left {
+
+  width:
+    250px;
+
+
+  height:
+    250px;
+
+
+  left:
+    -105px;
+
+
+  top:
+    -130px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    var(--blue);
+
+}
+
+
+
+/* 左上淺藍 */
+
+.shape-light-left {
+
+  width:
+    160px;
+
+
+  height:
+    210px;
+
+
+  left:
+    120px;
+
+
+  top:
+    -140px;
+
+
+  border-radius:
+    0 0 90px 90px;
+
+
+  background:
+    rgba(
+      201,
+      223,
+      242,
+      .94
+    );
+
+
+  transform:
+    rotate(-6deg);
+
+}
+
+
+
+/* 右上藍色大圓 */
+
+.shape-blue-right {
+
+  width:
+    245px;
+
+
+  height:
+    245px;
+
+
+  right:
+    -74px;
+
+
+  top:
+    -78px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+
+    linear-gradient(
+      140deg,
+      #4d9be8,
+      #76b1df
+    );
+
+}
+
+
+
+/* 右側米色方塊 */
+
+.shape-beige-square {
+
+  width:
+    130px;
+
+
+  height:
+    130px;
+
+
+  right:
+    47px;
+
+
+  top:
+    105px;
+
+
+  border-radius:
+    26px;
+
+
+  background:
+    rgba(
+      233,
+      224,
+      215,
+      .94
+    );
+
+
+  transform:
+    rotate(15deg);
+
+}
+
+
+
+/* 右下咖啡色方塊 */
+
+.shape-brown-square {
+
+  width:
+    65px;
+
+
+  height:
+    65px;
+
+
+  right:
+    27px;
+
+
+  bottom:
+    25px;
+
+
+  border-radius:
+    18px;
+
+
+  background:
+    var(--brown);
+
+
+  transform:
+    rotate(-11deg);
+
+}
+
+
+
+/* 下方米色圓環 */
+
+.shape-ring {
+
+  width:
+    270px;
+
+
+  height:
+    270px;
+
+
+  left:
+    90px;
+
+
+  bottom:
+    -220px;
+
+
+  border-radius:
+    50%;
+
+
+  border:
+    29px solid
+    rgba(
+      226,
+      215,
+      203,
+      .75
+    );
+
+}
+
+
+
+/* 小咖啡線 */
+
+.shape-brown-line {
+
+  width:
+    83px;
+
+
+  height:
+    8px;
+
+
+  right:
+    177px;
+
+
+  top:
+    72px;
+
+
+  border-radius:
+    100px;
+
+
+  background:
+    var(--brown);
+
+
+  transform:
+    rotate(-15deg);
+
+}
+
+
+
+/* 點 */
+
+.shape-dot-one {
+
+  width:
+    17px;
+
+
+  height:
+    17px;
+
+
+  left:
+    58%;
+
+
+  bottom:
+    53px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    var(--brown);
+
+}
+
+
+
+.shape-dot-two {
+
+  width:
+    13px;
+
+
+  height:
+    13px;
+
+
+  left:
+    64%;
+
+
+  bottom:
+    28px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    var(--blue);
+
+}
+
+
+
+/* ==================================================
+   顏色裝飾條
+================================================== */
+
+.color-strip {
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+
+    1.15fr
+    1fr
+    1fr
+    1fr
+    1.15fr;
+
+
+  gap:
+    7px;
+
+
+  height:
+    13px;
+
+
+  margin:
+    19px 0 31px;
+
+}
+
+
+
+.color-strip span {
+
+  border-radius:
+    100px;
+
+}
+
+
+
+.color-strip span:nth-child(1) {
+
+  background:
+    var(--blue);
+
+}
+
+
+
+.color-strip span:nth-child(2) {
+
+  background:
+    var(--blue-light);
+
+}
+
+
+
+.color-strip span:nth-child(3) {
+
+  background:
+    #f1f0ec;
+
+}
+
+
+
+.color-strip span:nth-child(4) {
+
+  background:
+    var(--beige);
+
+}
+
+
+
+.color-strip span:nth-child(5) {
+
+  background:
+    var(--brown);
+
+}
+
+
+
+/* ==================================================
+   提示
+================================================== */
+
+.hint {
+
+  margin:
+    0 0 20px;
+
+
+  color:
+    #89949a;
+
+
+  text-align:
+    center;
+
+
+  font-size:
+    14px;
+
+}
+
+
+
+/* ==================================================
+   ACCORDION
+================================================== */
+
+.accordion {
+
+  display:
+    grid;
+
+
+  gap:
+    15px;
+
+}
+
+
+
+details {
+
+  overflow:
+    hidden;
+
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .93
+    );
+
+
+  border:
+    1px solid
+    rgba(
+      56,
+      83,
+      100,
+      .12
+    );
+
+
+  border-radius:
+    23px;
+
+
+  box-shadow:
+    0 8px 23px
+    rgba(
+      50,
+      75,
+      92,
+      .065
+    );
+
+}
+
+
+
+details[open] {
+
+  border-color:
+    rgba(
+      77,
+      155,
+      232,
+      .28
+    );
+
+
+  box-shadow:
+    0 15px 34px
+    rgba(
+      50,
+      75,
+      92,
+      .10
+    );
+
+}
+
+
+
+summary {
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  gap:
+    15px;
+
+
+  padding:
+    19px 21px;
+
+
+  cursor:
+    pointer;
+
+
+  list-style:
+    none;
+
+
+  color:
+    #294355;
+
+
+  font-size:
+    19px;
+
+
+  font-weight:
+    900;
+
+
+  user-select:
+    none;
+
+}
+
+
+
+summary::-webkit-details-marker {
+
+  display:
+    none;
+
+}
+
+
+
+/* ==================================================
+   編號
+================================================== */
+
+.number {
+
+  flex:
+    0 0 auto;
+
+
+  display:
+    grid;
+
+
+  place-items:
+    center;
+
+
+  width:
+    43px;
+
+
+  height:
+    43px;
+
+
+  color:
+    #ffffff;
+
+
+  background:
+    var(--blue);
+
+
+  border-radius:
+    14px;
+
+
+  font-size:
+    14px;
+
+
+  box-shadow:
+    0 7px 16px
+    rgba(
+      77,
+      155,
+      232,
+      .24
+    );
+
+}
+
+
+
+details:nth-child(2)
+.number {
+
+  background:
+    #79afd8;
+
+}
+
+
+
+details:nth-child(3)
+.number {
+
+  background:
+    var(--blue-dark);
+
+}
+
+
+
+details:nth-child(4)
+.number {
+
+  background:
+    #bda38b;
+
+}
+
+
+
+details:nth-child(5)
+.number {
+
+  background:
+    var(--brown);
+
+}
+
+
+
+.section-title {
+
+  flex:
+    1;
+
+}
+
+
+
+/* ==================================================
+   箭頭
+================================================== */
+
+.arrow {
+
+  position:
+    relative;
+
+
+  flex:
+    0 0 auto;
+
+
+  width:
+    35px;
+
+
+  height:
+    35px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    #f0f5f7;
+
+}
+
+
+
+.arrow::before,
+.arrow::after {
+
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  top:
+    16px;
+
+
+  width:
+    9px;
+
+
+  height:
+    2px;
+
+
+  border-radius:
+    2px;
+
+
+  background:
+    #627986;
+
+
+  transition:
+    transform .2s ease;
+
+}
+
+
+
+.arrow::before {
+
+  left:
+    9px;
+
+
+  transform:
+    rotate(45deg);
+
+}
+
+
+
+.arrow::after {
+
+  right:
+    9px;
+
+
+  transform:
+    rotate(-45deg);
+
+}
+
+
+
+details[open]
+.arrow::before {
+
+  transform:
+    rotate(-45deg);
+
+}
+
+
+
+details[open]
+.arrow::after {
+
+  transform:
+    rotate(45deg);
+
+}
+
+
+
+/* ==================================================
+   展開內容
+================================================== */
+
+.content {
+
+  padding:
+    7px 23px 23px;
+
+
+  border-top:
+    1px solid
+    rgba(
+      53,
+      79,
+      96,
+      .11
+    );
+
+}
+
+
+
+.content ol {
+
+  margin:
+    14px 0 0;
+
+
+  padding-left:
+    1.55em;
+
+}
+
+
+
+.content li {
+
+  margin:
+    14px 0;
+
+
+  padding-left:
+    5px;
+
+}
+
+
+
+.item-line {
+
+  display:
+    block;
+
+}
+
+
+
+.item-subline {
+
+  margin-top:
+    3px;
+
+}
+
+
+
+/* ==================================================
+   時間表
+================================================== */
+
+.schedule-wrapper {
+
+  width:
+    100%;
+
+
+  margin-top:
+    16px;
+
+
+  overflow-x:
+    auto;
+
+
+  -webkit-overflow-scrolling:
+    touch;
+
+
+  border:
+    1px solid
+    var(--line);
+
+
+  border-radius:
+    18px;
+
+
+  background:
+    #ffffff;
+
+}
+
+
+
+.schedule-table {
+
+  width:
+    100%;
+
+
+  min-width:
+    650px;
+
+
+  border-collapse:
+    collapse;
+
+
+  table-layout:
+    fixed;
+
+
+  font-size:
+    15px;
+
+}
+
+
+
+.schedule-table th,
+.schedule-table td {
+
+  padding:
+    13px 14px;
+
+
+  text-align:
+    center;
+
+
+  vertical-align:
+    middle;
+
+
+  border-right:
+    1px solid
+    var(--line);
+
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+}
+
+
+
+.schedule-table th:last-child,
+.schedule-table td:last-child {
+
+  border-right:
+    none;
+
+}
+
+
+
+.schedule-table
+tbody
+tr:last-child
+td {
+
+  border-bottom:
+    none;
+
+}
+
+
+
+.schedule-table thead th {
+
+  background:
+    var(--blue-pale);
+
+
+  color:
+    #2c526a;
+
+
+  font-size:
+    16px;
+
+
+  font-weight:
+    900;
+
+}
+
+
+
+.schedule-table
+th:nth-child(1) {
+
+  width:
+    28%;
+
+}
+
+
+
+.schedule-table
+th:nth-child(2),
+.schedule-table
+th:nth-child(3) {
+
+  width:
+    36%;
+
+}
+
+
+
+.time-cell {
+
+  color:
+    #4b606d;
+
+
+  background:
+    #fafcfd;
+
+
+  font-weight:
+    800;
+
+
+  white-space:
+    nowrap;
+
+}
+
+
+
+.saturday-cell {
+
+  background:
+    rgba(
+      201,
+      223,
+      242,
+      .34
+    );
+
+
+  font-weight:
+    700;
+
+}
+
+
+
+.sunday-cell {
+
+  background:
+    rgba(
+      233,
+      224,
+      215,
+      .38
+    );
+
+
+  font-weight:
+    700;
+
+}
+
+
+
+.schedule-note {
+
+  margin-top:
+    4px;
+
+
+  color:
+    #687881;
+
+
+  font-size:
+    13px;
+
+
+  font-weight:
+    600;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+  margin-top:
+    29px;
+
+
+  color:
+    #818a90;
+
+
+  text-align:
+    center;
+
+
+  font-size:
+    13px;
+
+}
+
+
+
+/* ==================================================
+   手機版
+================================================== */
+
+@media
+(max-width: 700px) {
+
+  .page {
+
+    width:
+      calc(
+        100% - 20px
+      );
+
+
+    padding-top:
+      10px;
+
+  }
+
+
+
+  /* HERO */
+
+  .hero {
+
+    min-height:
+      245px;
+
+
+    padding:
+      35px 23px;
+
+
+    align-items:
+      center;
+
+
+    border-radius:
+      25px;
+
+  }
+
+
+
+  .hero-content {
+
+    width:
+      100%;
+
+  }
+
+
+
+  .hero-title-row {
+
+    position:
+      relative;
+
+
+    z-index:
+      10;
+
+
+    display:
+      block;
+
+  }
+
+
+
+  #page-title {
+
+    width:
+      81%;
+
+
+    font-size:
+      clamp(
+        30px,
+        9vw,
+        42px
+      );
+
+
+    line-height:
+      1.17;
+
+
+    letter-spacing:
+      -1px;
+
+  }
+
+
+
+  .notice-tag {
+
+    margin-top:
+      13px;
+
+
+    padding:
+      7px 14px 8px;
+
+
+    font-size:
+      18px;
+
+  }
+
+
+
+  /* 幾何圖形 */
+
+  .shape-blue-left {
+
+    width:
+      170px;
+
+
+    height:
+      170px;
+
+
+    left:
+      -85px;
+
+
+    top:
+      -93px;
+
+  }
+
+
+
+  .shape-light-left {
+
+    width:
+      105px;
+
+
+    height:
+      150px;
+
+
+    left:
+      78px;
+
+
+    top:
+      -103px;
+
+  }
+
+
+
+  .shape-blue-right {
+
+    width:
+      165px;
+
+
+    height:
+      165px;
+
+
+    right:
+      -62px;
+
+
+    top:
+      -53px;
+
+  }
+
+
+
+  .shape-beige-square {
+
+    width:
+      91px;
+
+
+    height:
+      91px;
+
+
+    right:
+      18px;
+
+
+    top:
+      88px;
+
+
+    border-radius:
+      20px;
+
+  }
+
+
+
+  .shape-brown-square {
+
+    width:
+      48px;
+
+
+    height:
+      48px;
+
+
+    right:
+      13px;
+
+
+    bottom:
+      22px;
+
+
+    border-radius:
+      14px;
+
+  }
+
+
+
+  .shape-ring {
+
+    width:
+      190px;
+
+
+    height:
+      190px;
+
+
+    left:
+      42px;
+
+
+    bottom:
+      -145px;
+
+
+    border-width:
+      21px;
+
+  }
+
+
+
+  .shape-brown-line {
+
+    width:
+      57px;
+
+
+    height:
+      6px;
+
+
+    right:
+      78px;
+
+
+    top:
+      49px;
+
+  }
+
+
+
+  .shape-dot-one {
+
+    width:
+      14px;
+
+
+    height:
+      14px;
+
+
+    left:
+      auto;
+
+
+    right:
+      128px;
+
+
+    bottom:
+      38px;
+
+  }
+
+
+
+  .shape-dot-two {
+
+    width:
+      10px;
+
+
+    height:
+      10px;
+
+
+    left:
+      auto;
+
+
+    right:
+      96px;
+
+
+    bottom:
+      25px;
+
+  }
+
+
+
+  /* Accordion */
+
+  summary {
+
+    gap:
+      12px;
+
+
+    padding:
+      16px;
+
+
+    font-size:
+      17px;
+
+  }
+
+
+
+  .number {
+
+    width:
+      39px;
+
+
+    height:
+      39px;
+
+
+    border-radius:
+      12px;
+
+  }
+
+
+
+  .content {
+
+    padding:
+      5px 16px 19px;
+
+  }
+
+
+
+  /*
+   * 手機仍使用同一個三欄表格。
+   * 不另外切成日期卡片。
+   */
+
+  .schedule-wrapper {
+
+    margin-top:
+      13px;
+
+
+    border-radius:
+      15px;
+
+  }
+
+
+
+  .schedule-table {
+
+    min-width:
+      610px;
+
+
+    font-size:
+      14px;
+
+  }
+
+
+
+  .schedule-table th,
+  .schedule-table td {
+
+    padding:
+      11px 10px;
+
+  }
+
+}
+
+
+
+/* ==================================================
+   窄螢幕
+================================================== */
+
+@media
+(max-width: 390px) {
+
+  #page-title {
+
+    width:
+      85%;
+
+
+    font-size:
+      29px;
+
+  }
+
+
+
+  summary {
+
+    font-size:
+      16px;
+
+  }
+
+}
