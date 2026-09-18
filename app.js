@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   data.sections.forEach((section, index) => {
     const details = document.createElement("details");
-
     const summary = document.createElement("summary");
 
     const number = document.createElement("span");
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 function buildList(items) {
   const list = document.createElement("ol");
 
@@ -68,9 +66,7 @@ function buildList(items) {
       const text = document.createElement("div");
       text.className = "item-line";
 
-      if (index > 0) {
-        text.classList.add("item-subline");
-      }
+      if (index > 0) text.classList.add("item-subline");
 
       text.textContent = line;
       item.appendChild(text);
@@ -81,7 +77,6 @@ function buildList(items) {
 
   return list;
 }
-
 
 function buildSchedule(section) {
   const wrapper = document.createElement("div");
@@ -107,17 +102,9 @@ function buildSchedule(section) {
   section.rows.forEach(row => {
     const tr = document.createElement("tr");
 
-    tr.appendChild(
-      createScheduleCell(row.time, "time-cell")
-    );
-
-    tr.appendChild(
-      createScheduleCell(row.saturday, "saturday-cell")
-    );
-
-    tr.appendChild(
-      createScheduleCell(row.sunday, "sunday-cell")
-    );
+    tr.appendChild(createScheduleCell(row.time, "time-cell"));
+    tr.appendChild(createScheduleCell(row.saturday, "saturday-cell"));
+    tr.appendChild(createScheduleCell(row.sunday, "sunday-cell"));
 
     tbody.appendChild(tr);
   });
@@ -127,7 +114,6 @@ function buildSchedule(section) {
 
   return wrapper;
 }
-
 
 function createScheduleCell(value, className) {
   const cell = document.createElement("td");
@@ -143,9 +129,7 @@ function createScheduleCell(value, className) {
   values.forEach((text, index) => {
     const line = document.createElement("div");
 
-    if (index > 0) {
-      line.className = "schedule-note";
-    }
+    if (index > 0) line.className = "schedule-note";
 
     line.textContent = text;
     cell.appendChild(line);

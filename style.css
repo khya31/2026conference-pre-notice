@@ -13,13 +13,8 @@
   --line: #e0e6e9;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -38,8 +33,7 @@ body {
   padding: 28px 0 60px;
 }
 
-
-/* ===== 標題 ===== */
+/* 標題 */
 
 .hero {
   position: relative;
@@ -105,8 +99,7 @@ body {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-
-/* ===== 標題幾何美術 ===== */
+/* 標題幾何美術 */
 
 .hero-art {
   position: absolute;
@@ -115,9 +108,7 @@ body {
   pointer-events: none;
 }
 
-.shape {
-  position: absolute;
-}
+.shape { position: absolute; }
 
 .shape-blue-left {
   width: 250px;
@@ -204,8 +195,7 @@ body {
   background: var(--blue);
 }
 
-
-/* ===== 配色條 ===== */
+/* 配色條 */
 
 .color-strip {
   display: grid;
@@ -215,10 +205,7 @@ body {
   margin: 19px 0 31px;
 }
 
-.color-strip span {
-  border-radius: 100px;
-}
-
+.color-strip span { border-radius: 100px; }
 .color-strip span:nth-child(1) { background: var(--blue); }
 .color-strip span:nth-child(2) { background: var(--blue-light); }
 .color-strip span:nth-child(3) { background: #f1f0ec; }
@@ -232,8 +219,7 @@ body {
   font-size: 14px;
 }
 
-
-/* ===== 摺疊項目 ===== */
+/* 摺疊項目 */
 
 .accordion {
   display: grid;
@@ -266,9 +252,7 @@ summary {
   user-select: none;
 }
 
-summary::-webkit-details-marker {
-  display: none;
-}
+summary::-webkit-details-marker { display: none; }
 
 .number {
   flex: 0 0 auto;
@@ -289,12 +273,9 @@ details:nth-child(4) .number { background: #c1a58c; }
 details:nth-child(5) .number { background: #a87543; }
 details:nth-child(6) .number { background: #397faf; }
 
-.section-title {
-  flex: 1;
-}
+.section-title { flex: 1; }
 
-
-/* ===== 箭頭 ===== */
+/* 箭頭 */
 
 .arrow {
   position: relative;
@@ -327,16 +308,10 @@ details:nth-child(6) .number { background: #397faf; }
   transform: rotate(-45deg);
 }
 
-details[open] .arrow::before {
-  transform: rotate(-45deg);
-}
+details[open] .arrow::before { transform: rotate(-45deg); }
+details[open] .arrow::after { transform: rotate(45deg); }
 
-details[open] .arrow::after {
-  transform: rotate(45deg);
-}
-
-
-/* ===== 內文 ===== */
+/* 內文 */
 
 .content {
   padding: 7px 23px 23px;
@@ -353,16 +328,10 @@ details[open] .arrow::after {
   padding-left: 5px;
 }
 
-.item-line {
-  display: block;
-}
+.item-line { display: block; }
+.item-subline { margin-top: 4px; }
 
-.item-subline {
-  margin-top: 4px;
-}
-
-
-/* ===== 時間表 ===== */
+/* 時間表 */
 
 .schedule-wrapper {
   width: 100%;
@@ -392,13 +361,9 @@ details[open] .arrow::after {
 }
 
 .schedule-table th:last-child,
-.schedule-table td:last-child {
-  border-right: 0;
-}
+.schedule-table td:last-child { border-right: 0; }
 
-.schedule-table tbody tr:last-child td {
-  border-bottom: 0;
-}
+.schedule-table tbody tr:last-child td { border-bottom: 0; }
 
 .schedule-table thead th {
   background: var(--blue-pale);
@@ -407,14 +372,9 @@ details[open] .arrow::after {
   font-weight: 900;
 }
 
-.schedule-table th:nth-child(1) {
-  width: 28%;
-}
-
+.schedule-table th:nth-child(1) { width: 28%; }
 .schedule-table th:nth-child(2),
-.schedule-table th:nth-child(3) {
-  width: 36%;
-}
+.schedule-table th:nth-child(3) { width: 36%; }
 
 .time-cell {
   color: #4b606d;
@@ -440,8 +400,7 @@ details[open] .arrow::after {
   font-weight: 600;
 }
 
-
-/* ===== 頁尾 ===== */
+/* 頁尾 */
 
 footer {
   margin-top: 29px;
@@ -450,8 +409,7 @@ footer {
   font-size: 13px;
 }
 
-
-/* ===== 手機 ===== */
+/* 手機 */
 
 @media (max-width: 700px) {
   .page {
@@ -465,9 +423,7 @@ footer {
     border-radius: 25px;
   }
 
-  .hero-content {
-    width: 100%;
-  }
+  .hero-content { width: 100%; }
 
   .hero-title-row {
     position: relative;
@@ -568,9 +524,7 @@ footer {
     border-radius: 12px;
   }
 
-  .content {
-    padding: 5px 16px 19px;
-  }
+  .content { padding: 5px 16px 19px; }
 
   .schedule-wrapper {
     margin-top: 13px;
@@ -594,7 +548,5 @@ footer {
     font-size: 29px;
   }
 
-  summary {
-    font-size: 16px;
-  }
+  summary { font-size: 16px; }
 }
