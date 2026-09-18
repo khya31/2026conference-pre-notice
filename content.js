@@ -1,6 +1,6 @@
 window.CONFERENCE_CONTENT = {
-  pageTitle: "行前須知",
-  noticeTitle: "2026年高屏澎青職特會",
+  pageTitle: "2026年高屏澎青職特會",
+  noticeTitle: "行前須知",
 
   sections: [
     {
