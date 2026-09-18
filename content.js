@@ -58,19 +58,31 @@ window.CONFERENCE_CONTENT = {
     {
       type: "schedule",
       title: "特會時間表",
-      headers: ["時間", "10/3 週六", "10/4 主日"],
-      rows: [
-        { time: "06:00～06:30", saturday: "各路線相調", sunday: "起牀 盥洗" },
-        { time: "06:30～07:30", saturday: "各路線相調", sunday: ["海邊晨興", "（06:30 集合）"] },
-        { time: "07:30～09:00", saturday: "各路線相調", sunday: "早餐/退房" },
-        { time: "09:00～09:30", saturday: "各路線相調", sunday: "擘餅聚會" },
-        { time: "09:30～11:05", saturday: "各路線相調", sunday: "信息二" },
-        { time: "11:05～11:30", saturday: "各路線相調", sunday: "專題二" },
-        { time: "11:30～15:00", saturday: "各路線相調", sunday: "賦歸" },
-        { time: "15:00～16:30", saturday: "入住 check-in", sunday: "" },
-        { time: "17:00～19:00", saturday: ["晚餐", "（18:45 聚會報到）", "（19:15 團體禱告）"], sunday: "" },
-        { time: "19:30～21:00", saturday: "信息一", sunday: "" },
-        { time: "21:00～22:00", saturday: "專題一", sunday: "" }
+      days: [
+        {
+          date: "10/3",
+          weekday: "週六",
+          rows: [
+            { time: "06:00～15:00", event: "各路線相調" },
+            { time: "15:00～16:30", event: "入住 check-in" },
+            { time: "17:00～19:00", event: ["晚餐", "18:45 聚會報到", "19:15 團體禱告"] },
+            { time: "19:30～21:00", event: "信息一" },
+            { time: "21:00～22:00", event: "專題一" }
+          ]
+        },
+        {
+          date: "10/4",
+          weekday: "主日",
+          rows: [
+            { time: "06:00～06:30", event: "起牀 盥洗" },
+            { time: "06:30～07:30", event: ["海邊晨興", "06:30 集合"] },
+            { time: "07:30～09:00", event: "早餐/退房" },
+            { time: "09:00～09:30", event: "擘餅聚會" },
+            { time: "09:30～11:05", event: "信息二" },
+            { time: "11:05～11:30", event: "專題二" },
+            { time: "11:30～15:00", event: "賦歸" }
+          ]
+        }
       ]
     }
   ]

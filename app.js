@@ -65,9 +65,7 @@ function buildList(items) {
     lines.forEach((line, index) => {
       const text = document.createElement("div");
       text.className = "item-line";
-
       if (index > 0) text.classList.add("item-subline");
-
       text.textContent = line;
       item.appendChild(text);
     });
@@ -80,60 +78,71 @@ function buildList(items) {
 
 function buildSchedule(section) {
   const wrapper = document.createElement("div");
-  wrapper.className = "schedule-wrapper";
+  wrapper.className = "schedule-days";
 
-  const table = document.createElement("table");
-  table.className = "schedule-table";
+  section.days.forEach(day => {
+    const dayBlock = document.createElement("section");
+    dayBlock.className = "schedule-day";
 
-  const thead = document.createElement("thead");
-  const headerRow = document.createElement("tr");
+    const dayTitle = document.createElement("div");
+    dayTitle.className = "schedule-day-title";
 
-  section.headers.forEach(header => {
-    const th = document.createElement("th");
-    th.textContent = header;
-    headerRow.appendChild(th);
+    const date = document.createElement("strong");
+    date.textContent = day.date;
+
+    const weekday = document.createElement("span");
+    weekday.textContent = day.weekday;
+
+    dayTitle.append(date, weekday);
+    dayBlock.appendChild(dayTitle);
+
+    const table = document.createElement("table");
+    table.className = "schedule-table";
+
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+
+    ["時間", "行程"].forEach(header => {
+      const th = document.createElement("th");
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+
+    day.rows.forEach(row => {
+      const tr = document.createElement("tr");
+
+      const timeCell = document.createElement("td");
+      timeCell.className = "time-cell";
+      timeCell.textContent = row.time;
+
+      const eventCell = document.createElement("td");
+      eventCell.className = "event-cell";
+      appendScheduleContent(eventCell, row.event);
+
+      tr.append(timeCell, eventCell);
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    dayBlock.appendChild(table);
+    wrapper.appendChild(dayBlock);
   });
-
-  thead.appendChild(headerRow);
-  table.appendChild(thead);
-
-  const tbody = document.createElement("tbody");
-
-  section.rows.forEach(row => {
-    const tr = document.createElement("tr");
-
-    tr.appendChild(createScheduleCell(row.time, "time-cell"));
-    tr.appendChild(createScheduleCell(row.saturday, "saturday-cell"));
-    tr.appendChild(createScheduleCell(row.sunday, "sunday-cell"));
-
-    tbody.appendChild(tr);
-  });
-
-  table.appendChild(tbody);
-  wrapper.appendChild(table);
 
   return wrapper;
 }
 
-function createScheduleCell(value, className) {
-  const cell = document.createElement("td");
-  cell.className = className;
-
-  if (!value) {
-    cell.innerHTML = "&nbsp;";
-    return cell;
-  }
-
+function appendScheduleContent(cell, value) {
   const values = Array.isArray(value) ? value : [value];
 
   values.forEach((text, index) => {
     const line = document.createElement("div");
-
-    if (index > 0) line.className = "schedule-note";
-
     line.textContent = text;
+    if (index > 0) line.className = "schedule-note";
     cell.appendChild(line);
   });
-
-  return cell;
 }
