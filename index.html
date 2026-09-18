@@ -1,1 +1,1457 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4d9be8">
+  <title>2026年高屏澎青職特會行前通知</title>
 
+  <style>
+    :root {
+      --blue: #4d9be8;
+      --blue-dark: #286aa8;
+      --blue-light: #c9dff2;
+
+      --cream: #f7f6f2;
+      --white: #ffffff;
+
+      --beige: #e9e0d7;
+      --brown: #a87543;
+
+      --text: #263743;
+      --gray: #6b7881;
+      --line: #e2e7ea;
+
+      --shadow: 0 12px 32px rgba(43, 72, 92, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 10% 5%,
+          rgba(77, 155, 232, 0.12),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 92% 18%,
+          rgba(168, 117, 67, 0.08),
+          transparent 24%
+        ),
+        var(--cream);
+
+      color: var(--text);
+
+      font-family:
+        "Noto Sans TC",
+        "PingFang TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      line-height: 1.75;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 28px));
+      margin: auto;
+      padding: 28px 0 60px;
+    }
+
+    /* =========================
+       封面
+    ========================== */
+
+    .hero {
+      position: relative;
+
+      overflow: hidden;
+
+      min-height: 280px;
+
+      padding: 46px 42px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.97),
+          rgba(255,255,255,0.75)
+        ),
+        linear-gradient(
+          135deg,
+          var(--blue-light),
+          var(--beige)
+        );
+
+      border-radius: 30px;
+
+      border: 1px solid rgba(255,255,255,0.9);
+
+      box-shadow: var(--shadow);
+    }
+
+    /* 幾何裝飾 */
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      right: -80px;
+      top: -100px;
+
+      border-radius: 50%;
+
+      background: rgba(77,155,232,0.18);
+
+      box-shadow:
+        -65px 95px 0 -28px rgba(201,223,242,0.7),
+        -130px 155px 0 -52px rgba(168,117,67,0.18);
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      left: -95px;
+      bottom: -105px;
+
+      border-radius: 50%;
+
+      border: 22px solid rgba(168,117,67,0.13);
+    }
+
+    .hero-small {
+      position: relative;
+      z-index: 2;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 7px 14px;
+
+      border-radius: 100px;
+
+      background: rgba(77,155,232,0.12);
+
+      color: var(--blue-dark);
+
+      font-size: 14px;
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+    .hero-small::before {
+      content: "";
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: var(--blue);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 2;
+
+      max-width: 700px;
+
+      margin: 18px 0 10px;
+
+      font-size: clamp(32px, 5vw, 54px);
+
+      line-height: 1.2;
+
+      letter-spacing: -1.5px;
+
+      color: #203849;
+    }
+
+    .hero-description {
+      position: relative;
+      z-index: 2;
+
+      margin: 0;
+
+      font-size: 18px;
+      font-weight: 600;
+
+      color: var(--gray);
+    }
+
+    .date-area {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 28px;
+    }
+
+    .date-item {
+      display: flex;
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 9px 14px;
+
+      background: rgba(255,255,255,0.8);
+
+      border: 1px solid rgba(77,155,232,0.18);
+
+      border-radius: 14px;
+
+      font-weight: 800;
+
+      color: #3a586a;
+    }
+
+    .date-item strong {
+      display: grid;
+      place-items: center;
+
+      width: 30px;
+      height: 30px;
+
+      border-radius: 9px;
+
+      background: var(--blue);
+
+      color: white;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       配色條
+    ========================== */
+
+    .color-line {
+      display: grid;
+
+      grid-template-columns:
+        1.15fr
+        1fr
+        1fr
+        1fr
+        1.15fr;
+
+      gap: 6px;
+
+      height: 13px;
+
+      margin: 18px 0 30px;
+    }
+
+    .color-line div {
+      border-radius: 100px;
+    }
+
+    .color-line div:nth-child(1) {
+      background: var(--blue);
+    }
+
+    .color-line div:nth-child(2) {
+      background: var(--blue-light);
+    }
+
+    .color-line div:nth-child(3) {
+      background: #f2f1ed;
+    }
+
+    .color-line div:nth-child(4) {
+      background: var(--beige);
+    }
+
+    .color-line div:nth-child(5) {
+      background: var(--brown);
+    }
+
+
+    /* =========================
+       摺疊選單
+    ========================== */
+
+    .hint {
+      text-align: center;
+
+      margin-bottom: 18px;
+
+      color: #7a858c;
+
+      font-size: 14px;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      overflow: hidden;
+
+      background: rgba(255,255,255,0.9);
+
+      border: 1px solid rgba(53,79,96,0.12);
+
+      border-radius: 22px;
+
+      box-shadow:
+        0 7px 22px
+        rgba(50,75,92,0.06);
+    }
+
+    details[open] {
+      border-color:
+        rgba(77,155,232,0.28);
+
+      box-shadow:
+        0 14px 32px
+        rgba(50,75,92,0.09);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 18px 21px;
+
+      cursor: pointer;
+
+      list-style: none;
+
+      user-select: none;
+
+      font-size: 19px;
+      font-weight: 900;
+
+      color: #294355;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .number {
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 14px;
+
+      background: var(--blue);
+
+      color: white;
+
+      font-size: 14px;
+
+      box-shadow:
+        0 7px 16px
+        rgba(77,155,232,0.24);
+    }
+
+    details:nth-child(2) .number {
+      background: #79afd8;
+    }
+
+    details:nth-child(3) .number {
+      background: #bda38b;
+    }
+
+    details:nth-child(4) .number {
+      background: var(--brown);
+    }
+
+    details:nth-child(5) .number {
+      background: var(--blue-dark);
+    }
+
+    .title {
+      flex: 1;
+    }
+
+    .arrow {
+      position: relative;
+
+      flex-shrink: 0;
+
+      width: 34px;
+      height: 34px;
+
+      border-radius: 50%;
+
+      background: #f1f5f7;
+    }
+
+    .arrow::before,
+    .arrow::after {
+      content: "";
+
+      position: absolute;
+
+      top: 16px;
+
+      width: 9px;
+      height: 2px;
+
+      border-radius: 2px;
+
+      background: #637885;
+
+      transition: 0.2s;
+    }
+
+    .arrow::before {
+      left: 9px;
+      transform: rotate(45deg);
+    }
+
+    .arrow::after {
+      right: 9px;
+      transform: rotate(-45deg);
+    }
+
+    details[open] .arrow::before {
+      transform: rotate(-45deg);
+    }
+
+    details[open] .arrow::after {
+      transform: rotate(45deg);
+    }
+
+    .content {
+      padding:
+        5px
+        22px
+        22px;
+
+      border-top:
+        1px solid
+        rgba(53,79,96,0.11);
+    }
+
+    .content ol {
+      margin: 14px 0 0;
+
+      padding-left: 1.5em;
+    }
+
+    .content li {
+      margin: 11px 0;
+
+      padding-left: 4px;
+    }
+
+    .time {
+      display: inline-block;
+
+      padding: 0 7px;
+
+      border-radius: 7px;
+
+      background:
+        rgba(77,155,232,0.11);
+
+      color: var(--blue-dark);
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       時間表
+    ========================== */
+
+    .schedule-table {
+      margin-top: 17px;
+
+      overflow-x: auto;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 18px;
+
+      background: white;
+    }
+
+    table {
+      width: 100%;
+
+      min-width: 620px;
+
+      border-collapse: collapse;
+
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 13px 15px;
+
+      text-align: center;
+      vertical-align: middle;
+
+      border-right:
+        1px solid
+        var(--line);
+
+      border-bottom:
+        1px solid
+        var(--line);
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    thead th {
+      background: #edf6fc;
+
+      color: #2c526a;
+
+      font-size: 16px;
+    }
+
+    td:first-child {
+      width: 26%;
+
+      background: #fafcfd;
+
+      color: #4b606d;
+
+      font-weight: 800;
+
+      white-space: nowrap;
+    }
+
+    .sat {
+      background:
+        rgba(201,223,242,0.33);
+    }
+
+    .sun {
+      background:
+        rgba(233,224,215,0.38);
+    }
+
+
+    /* =========================
+       手機版時間表
+    ========================== */
+
+    .mobile-schedule {
+      display: none;
+
+      gap: 14px;
+
+      margin-top: 16px;
+    }
+
+    .day {
+      overflow: hidden;
+
+      background: white;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 18px;
+    }
+
+    .day h3 {
+      margin: 0;
+
+      padding: 12px 15px;
+
+      background: #edf6fc;
+
+      color: #2c526a;
+
+      font-size: 17px;
+    }
+
+    .day.sunday h3 {
+      background: #f3ece5;
+
+      color: #795b3c;
+    }
+
+    .schedule-item {
+      display: grid;
+
+      grid-template-columns:
+        115px
+        1fr;
+
+      gap: 10px;
+
+      padding: 11px 14px;
+
+      border-top:
+        1px solid
+        var(--line);
+
+      font-size: 14px;
+    }
+
+    .schedule-item time {
+      color: #506775;
+
+      font-weight: 800;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       頁尾
+    ========================== */
+
+    footer {
+      margin-top: 28px;
+
+      text-align: center;
+
+      color: #818a90;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       手機
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .page {
+        width: calc(100% - 20px);
+
+        padding-top: 10px;
+      }
+
+      .hero {
+        min-height: 240px;
+
+        padding: 34px 22px 30px;
+
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: clamp(
+          29px,
+          10vw,
+          42px
+        );
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      summary {
+        gap: 12px;
+
+        padding: 16px;
+
+        font-size: 17px;
+      }
+
+      .number {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 12px;
+      }
+
+      .content {
+        padding:
+          4px
+          16px
+          18px;
+      }
+
+      .schedule-table {
+        display: none;
+      }
+
+      .mobile-schedule {
+        display: grid;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="page">
+
+  <!-- ======================
+       封面
+  ======================= -->
+
+  <section class="hero">
+
+    <div class="hero-small">
+      2026 高屏澎青職特會
+    </div>
+
+    <h1>
+      2026年高屏澎青職特會<br>
+      行前通知
+    </h1>
+
+    <p class="hero-description">
+      請依各項通知預備，並準時前往指定地點。
+    </p>
+
+    <div class="date-area">
+
+      <div class="date-item">
+        <strong>六</strong>
+        10/3 週六
+      </div>
+
+      <div class="date-item">
+        <strong>日</strong>
+        10/4 主日
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 配色參考 -->
+
+  <div class="color-line">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+  <div class="hint">
+    點選項目即可展開或收合內容
+  </div>
+
+
+  <!-- ======================
+       五大項目
+  ======================= -->
+
+  <section class="accordion">
+
+
+    <!-- 01 -->
+
+    <details open>
+
+      <summary>
+
+        <span class="number">
+          01
+        </span>
+
+        <span class="title">
+          聚會及兒童服事
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <ol>
+
+          <li>
+            聚會會場於飯店大廳下方，
+            請先按照飯店指示牌前往大廳，
+            再依招待服事聖徒指引前往會場。
+          </li>
+
+          <li>
+            提前
+            <span class="time">
+              5 分鐘
+            </span>
+            就座，並為聚會禱告。
+            第一堂聚會為
+            <span class="time">
+              19:30
+            </span>，
+            鼓勵聖徒們於
+            <span class="time">
+              19:15
+            </span>
+            至會場參加團體禱告。
+          </li>
+
+          <li>
+            <span class="time">
+              18:45
+            </span>
+            開始報到，
+            <span class="time">
+              19:25 前
+            </span>
+            完成報到者，可獲贈特會紀念品。
+          </li>
+
+          <li>
+            聚會時請佩戴名牌。
+            （請自備名牌套，或於現場購買。）
+          </li>
+
+          <li>
+            聚會及配搭服事時請著正式服裝，
+            鞋子以包鞋為主。
+          </li>
+
+          <li>
+            兒童服事場地於聚會會場旁，
+            請先按照飯店指示牌前往大廳，
+            再依招待服事聖徒指引前往兒童服事場地。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- 02 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          02
+        </span>
+
+        <span class="title">
+          福華度假飯店住宿、用餐
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <ol>
+
+          <li>
+            <span class="time">
+              15:00
+            </span>
+            開放辦理入住。
+          </li>
+
+          <li>
+            辦理入住時間及位置：
+            <span class="time">
+              15:00～16:30
+            </span>，
+            於飯店大廳左側、茶水點心區旁。
+          </li>
+
+          <li>
+            晚餐於
+            <span class="time">
+              17:00
+            </span>
+            開始，
+            請於
+            <span class="time">
+              16:30 前
+            </span>
+            辦理入住。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- 03 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          03
+        </span>
+
+        <span class="title">
+          停車資訊
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <ol>
+
+          <li>
+            飯店附平面及地下停車場；
+            地下停車場無電梯通往一樓，
+            如有行動不便者，
+            請先至飯店大門下車。
+          </li>
+
+          <li>
+            非住宿於福華飯店者，
+            請告知車道入口工作人員
+            來參加「高雄市召會活動」，
+            即可入內停車。
+          </li>
+
+          <li>
+            飯店車位有限，
+            會優先提供給住宿於飯店者停放車輛，
+            建議自理住宿的聖徒提早赴會。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- 04 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          04
+        </span>
+
+        <span class="title">
+          生活
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+        <ol>
+
+          <li>
+            個人身體因素需服用藥品，
+            請於特會前自行攜帶。
+          </li>
+
+          <li>
+            特會期間各項事務服事皆由聖徒配搭，
+            請留意並依照大會及各照顧區通知，
+            準時於指定地點集合。
+          </li>
+
+          <li>
+            有感冒症狀者，
+            請根據身體狀況評估是否赴會；
+            若仍赴會，
+            請務必配戴口罩。
+          </li>
+
+        </ol>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- 05 時間表 -->
+
+    <details>
+
+      <summary>
+
+        <span class="number">
+          05
+        </span>
+
+        <span class="title">
+          特會時間表
+        </span>
+
+        <span class="arrow"></span>
+
+      </summary>
+
+      <div class="content">
+
+
+        <!-- 桌機版 -->
+
+        <div class="schedule-table">
+
+          <table>
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  時間
+                </th>
+
+                <th>
+                  10/3 週六
+                </th>
+
+                <th>
+                  10/4 主日
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  06:00～06:30
+                </td>
+
+                <td
+                  class="sat"
+                  rowspan="7"
+                >
+                  各路線相調
+                </td>
+
+                <td class="sun">
+                  起牀、盥洗
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  06:30～07:30
+                </td>
+
+                <td class="sun">
+                  海邊晨興
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  07:30～09:00
+                </td>
+
+                <td class="sun">
+                  早餐
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  09:00～09:30
+                </td>
+
+                <td class="sun">
+                  擘餅聚會
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  09:30～11:05
+                </td>
+
+                <td class="sun">
+                  信息二
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  11:05～11:30
+                </td>
+
+                <td class="sun">
+                  專題二
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  11:30～15:00
+                </td>
+
+                <td class="sun">
+                  賦歸
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  15:00～17:00
+                </td>
+
+                <td class="sat">
+                  入住 check-in
+                </td>
+
+                <td></td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  17:00～19:00
+                </td>
+
+                <td class="sat">
+                  晚餐
+                </td>
+
+                <td></td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  19:30～21:00
+                </td>
+
+                <td class="sat">
+                  信息一
+                </td>
+
+                <td></td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  21:00～22:00
+                </td>
+
+                <td class="sat">
+                  專題一
+                </td>
+
+                <td></td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <!-- 手機版 -->
+
+        <div class="mobile-schedule">
+
+
+          <section class="day">
+
+            <h3>
+              10/3 週六
+            </h3>
+
+            <div class="schedule-item">
+
+              <time>
+                06:00～15:00
+              </time>
+
+              <div>
+                各路線相調
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                15:00～17:00
+              </time>
+
+              <div>
+                入住 check-in
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                17:00～19:00
+              </time>
+
+              <div>
+                晚餐
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                19:30～21:00
+              </time>
+
+              <div>
+                信息一
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                21:00～22:00
+              </time>
+
+              <div>
+                專題一
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <section class="day sunday">
+
+            <h3>
+              10/4 主日
+            </h3>
+
+            <div class="schedule-item">
+
+              <time>
+                06:00～06:30
+              </time>
+
+              <div>
+                起牀、盥洗
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                06:30～07:30
+              </time>
+
+              <div>
+                海邊晨興
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                07:30～09:00
+              </time>
+
+              <div>
+                早餐
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                09:00～09:30
+              </time>
+
+              <div>
+                擘餅聚會
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                09:30～11:05
+              </time>
+
+              <div>
+                信息二
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                11:05～11:30
+              </time>
+
+              <div>
+                專題二
+              </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+              <time>
+                11:30～15:00
+              </time>
+
+              <div>
+                賦歸
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+  </section>
+
+
+  <footer>
+    2026年高屏澎青職特會｜行前通知
+  </footer>
+
+</main>
+
+
+<script>
+  /*
+   * 每次只展開一個大項目
+   */
+
+  const detailItems =
+    document.querySelectorAll("details");
+
+  detailItems.forEach((item) => {
+
+    item.addEventListener(
+      "toggle",
+      () => {
+
+        if (!item.open) {
+          return;
+        }
+
+        detailItems.forEach(
+          (otherItem) => {
+
+            if (otherItem !== item) {
+              otherItem.open = false;
+            }
+
+          }
+        );
+
+      }
+    );
+
+  });
+</script>
+
+</body>
+</html>
