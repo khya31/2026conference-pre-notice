@@ -19,6 +19,7 @@
   --paper: #fffdf9;
   --ink: #35424b;
   --ink-soft: #71808a;
+  --red: #d64545;
   --line: #e8e3de;
 
   --shadow-sm: 0 8px 22px rgba(72, 78, 84, .07);
@@ -343,6 +344,19 @@ details[open] .arrow {
   margin-top: 3px;
 }
 
+
+/* =========================
+   Partial text styles
+========================= */
+
+.text-red {
+  color: var(--red);
+  font-weight: 800;
+}
+
+.text-bold {
+  font-weight: 900;
+}
 
 /* =========================
    Schedule

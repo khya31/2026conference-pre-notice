@@ -65,8 +65,12 @@ function buildList(items) {
     lines.forEach((line, index) => {
       const text = document.createElement("div");
       text.className = "item-line";
-      if (index > 0) text.classList.add("item-subline");
-      text.textContent = line;
+
+      if (index > 0) {
+        text.classList.add("item-subline");
+      }
+
+      appendRichText(text, line);
       item.appendChild(text);
     });
 
@@ -74,6 +78,33 @@ function buildList(items) {
   });
 
   return list;
+}
+
+function appendRichText(container, value) {
+  if (typeof value === "string") {
+    container.textContent = value;
+    return;
+  }
+
+  if (value && Array.isArray(value.parts)) {
+    value.parts.forEach(part => {
+      const span = document.createElement("span");
+      span.textContent = part.text || "";
+
+      if (part.red) {
+        span.classList.add("text-red");
+      }
+
+      if (part.bold) {
+        span.classList.add("text-bold");
+      }
+
+      container.appendChild(span);
+    });
+    return;
+  }
+
+  container.textContent = "";
 }
 
 function buildSchedule(section) {
@@ -139,10 +170,14 @@ function buildSchedule(section) {
 function appendScheduleContent(cell, value) {
   const values = Array.isArray(value) ? value : [value];
 
-  values.forEach((text, index) => {
+  values.forEach((lineValue, index) => {
     const line = document.createElement("div");
-    line.textContent = text;
-    if (index > 0) line.className = "schedule-note";
+
+    if (index > 0) {
+      line.className = "schedule-note";
+    }
+
+    appendRichText(line, lineValue);
     cell.appendChild(line);
   });
 }
